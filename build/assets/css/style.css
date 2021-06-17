@@ -222,30 +222,15 @@ h1, h2, h3, h4, h5, h6 {
 
 :root {
   --white: rgba(255,255,255,1);
-  --white005: rgba(255,255,255,.05);
-  --white10: rgba(255,255,255,.1);
-  --white30: rgba(255,255,255,.3);
-  --white60: rgba(255,255,255,.6);
-  --white80: rgba(255,255,255,.8);
-  --black0: rgba(51,51,51,0);
-  --black: rgba(51,51,51,1);
-  --black10: rgba(51,51,51,.10);
-  --black15: rgba(51,51,51,.15);
-  --black25: rgba(51,51,51,.25);
-  --black40: rgba(51,51,51,.4);
-  --black50: rgba(51,51,51,.5);
-  --black60: rgba(51,51,51,.6);
-  --red: rgba(238,85,75,1);
-  --red10: rgba(238,85,75,.1);
-  --green: rgba(132,183,57,1);
-  --green60: rgba(132,183,57,.6);
-  --green-dark: rgba(115,166,40,1);
-  --light-green: rgba(230,241,215,1);
-  --purple: rgba(108,57,183,1);
-  --gray-light: rgba(249,249,249,1);
-  --gray-dark: rgba(242,242,242,1);
-  --gray: rgba(250,250,250,1);
-  --input-color: rgba(153,153,153,1);
+  --black: rgba(0, 36, 70, 1);
+  --black50: rgba(0, 36, 70, .5);
+  --blue: rgba(0, 96, 187, 1);
+  --border: rgba(51, 51, 51, .1);
+}
+
+html {
+  min-width: 320px;
+  max-width: 1920px;
 }
 
 * {
@@ -264,13 +249,16 @@ h1, h2, h3, h4, h5, h6 {
 
 *, a {
   color: var(--black);
+  letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 25px;
 }
 
 .fix-box {
   height: 100%;
-  width: 290px;
-  min-width: 290px;
-  max-width: 1920px;
+  width: 320px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -278,12 +266,263 @@ h1, h2, h3, h4, h5, h6 {
 @media (min-width: 768px) {
   .fix-box {
     width: 708px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
 @media (min-width: 1200px) {
   .fix-box {
     width: 1170px;
+  }
+}
+
+.btns-box {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .btns-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 1200px) {
+  .btns-box {
+    margin-top: 60px;
+  }
+}
+
+.btns-box .btn + .btn {
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  .btns-box .btn + .btn {
+    margin-top: 0;
+    margin-left: 30px;
+  }
+}
+
+.btn {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  padding: 12px 24px;
+  border-radius: 5px;
+  border: 1px solid var(--black);
+  color: var(--black);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn.btn-blue {
+  font-weight: bold;
+  padding: 14px 28px;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+.reviews__list {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 60px;
+  margin-top: 60px;
+}
+
+@media (min-width: 1200px) {
+  .reviews__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 30px;
+    margin-top: 70px;
+  }
+}
+
+.reviews .btns-box .btn {
+  width: 190px;
+}
+
+@media (min-width: 768px) {
+  .reviews .btns-box .btn {
+    width: 216px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .reviews .btns-box .btn {
+    width: 170px;
+  }
+}
+
+.review {
+  border: 1px solid var(--border);
+  padding: 0 15px 25px;
+  position: relative;
+}
+
+@media (min-width: 768px) {
+  .review {
+    padding: 15px 20px 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .review {
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.review__ph-box {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (min-width: 768px) {
+  .review__ph-box {
+    top: -20px;
+    left: 20px;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+}
+
+.review__ph {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.review__header {
+  padding-top: 85px;
+}
+
+@media (min-width: 768px) {
+  .review__header {
+    padding-top: 0;
+    padding-left: 115px;
+  }
+}
+
+.review__author {
+  font-family: PlayfairDisplay;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .review__author {
+    text-align: left;
+  }
+}
+
+.review__service-name {
+  display: block;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--blue);
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .review__service-name {
+    margin-top: 6px;
+    text-align: left;
+  }
+}
+
+.review__text {
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--black50);
+  margin-top: 25px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .review__text {
+    margin-top: 33px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .review__text {
+    margin-bottom: 15px;
+  }
+}
+
+.review__date {
+  font-style: italic;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .review__date {
+    margin-top: 15px;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .review__date {
+    margin-top: auto;
   }
 }
 
