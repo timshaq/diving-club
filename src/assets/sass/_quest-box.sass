@@ -1,0 +1,172 @@
+.quest-box
+	&__fix-box
+	&__shadow
+		box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.06)
+		border-radius: 15px
+		@media(min-width: $md)
+			display: flex
+			background-color: var(--gray-light)
+			box-shadow: none
+	&__card
+
+	&__form
+
+.fix-box
+
+.quest-box-card
+	position: relative
+	border-radius: 15px
+	overflow: hidden
+	background-color: var(--black)
+	padding: 25px 8px 8px
+	@media(min-width: $md)
+		padding: 10px
+		width: 340px
+	@media(min-width: $xl)
+		padding: 40px
+		width: 500px
+	&__bg-box
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+	&__bg
+		width: 100%
+		height: 100%
+		object-fit: cover
+		object-position: 0 30%
+		@media(min-width: $md)
+			object-position: center center
+	&__content
+		z-index: 2
+		position: relative
+		@media(min-width: $md)
+			display: flex
+			flex-direction: column
+			height: 100%
+	&__title
+		font-family: PlayfairDisplay
+		font-style: normal
+		font-weight: bold
+		font-size: 20px
+		line-height: 27px
+	&__subtitle
+		font-size: 13px
+		line-height: 23px
+		margin-top: 5px
+	&__title,
+	&__subtitle
+		color: var(--white)
+		text-align: center
+		@media(min-width: $md)
+			display: none
+	&__label
+		margin-top: 16px
+.quest-box-card-label
+	padding: 16px
+	background-color: rgba(63, 114, 129, 1)
+	border-radius: 15px
+	display: flex
+	align-items: center
+	@media(min-width: $md)
+		margin-top: auto
+		padding: 15px
+	@media(min-width: $xl)
+		padding: 20px
+	&__icon-box
+		width: 48px
+		height: 48px
+		@media(min-width: $md)
+			width: 60px
+			height: 60px
+		@media(min-width: $xl)
+			width: 78px
+			height: 78px
+	&__icon
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__text
+		margin-left: 8px
+		@media(min-width: $md)
+			margin-left: 15px
+		@media(min-width: $xl)
+			margin-left: 18px
+	&__title
+		font-weight: 900
+		font-size: 12px
+		line-height: 19px
+		color: var(--white)
+		@media(min-width: $xl)
+			font-size: 14px
+			line-height: 22px
+	&__a
+		font-weight: 900
+		font-size: 20px
+		line-height: 32px
+		color: var(--white)
+		@media(min-width: $md)
+			font-size: 24px
+			line-height: 38px
+		@media(min-width: $xl)
+			font-size: 30px
+			line-height: 48px
+.quest-box-form
+	padding: 20px 16px 30px
+	@media(min-width: $md)
+		width: 310px
+		margin-right: auto
+		margin-left: auto
+		padding: 30px 0
+	@media(min-width: $xl)
+		width: 470px
+		padding: 40px 0 50px
+	&__legend
+
+	&__title
+		font-family: PlayfairDisplay
+		font-style: normal
+		font-weight: bold
+		font-size: 24px
+		line-height: 32px
+	&__p
+		font-size: 14px
+		line-height: 22px
+		color: var(--black50)
+		margin-top: 10px
+	&__title,
+	&__p
+		display: none
+		@media(min-width: $md)
+			display: block
+			text-align: center
+	&__fieldset
+		@media(min-width: $md)
+			margin-top: 15px
+		@media(min-width: $xl)
+			width: 330px
+			margin-right: auto
+			margin-left: auto
+			margin-top: 30px
+
+	&__list
+
+	&__li
+		& + .quest-box-form__li
+			margin-top: 15px
+	&__label
+	&__name
+		display: block
+		margin-bottom: 4px
+	&__input
+	&__submit
+		margin-top: 30px
+		width: 100%
+		@media(min-width: $md)
+			width: 170px
+			margin-right: auto
+			margin-left: auto
+		@media(min-width: $xl)
+			margin-top: 40px
+
