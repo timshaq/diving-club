@@ -1,1 +1,58 @@
 .header
+	background-color: var(--white)
+	box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.07)
+	padding: 19px 0
+	&__fix-box
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__burger
+		@media(min-width: $xl)
+			display: none
+	&__burger-icon
+
+	&__logo-box
+		height: 36px
+		@media(min-width: $md)
+			height: 40px
+		@media(min-width: $xl)
+			height: 48px
+	&__logo
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__nav
+
+	&__nav-ul
+		display: flex
+	&__nav-li
+		& + .header__nav-li
+			margin-left: 80px
+	&__nav-a
+		font-weight: 600
+		font-size: 16px
+		line-height: 22px
+		&:hover
+			color: var(--blue)
+	&__tel
+		display: flex
+		flex-direction: column
+		align-items: center
+	&__tel-link
+		display: flex
+	&__tel-link-icon
+		width: 24px
+		height: 24px
+		object-fit: contain
+	&__tel-link-text
+		font-weight: bold
+		font-size: 16px
+		line-height: 22px
+		margin-left: 15px
+	&__tel-callback
+		font-weight: bold
+		font-size: 14px
+		line-height: 19px
+		color: var(--blue)
+		border-bottom: 1.5px dashed var(--blue)
+		margin-top: 15px

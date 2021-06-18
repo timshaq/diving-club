@@ -1,0 +1,24 @@
+.breadscrumb
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: 30px
+	@media(min-width: $md)
+		margin-bottom: 20px
+.breadscrumb-item
+	opacity: .5
+	&:not(:first-child)
+		margin-left: 5px
+		position: relative
+		&:before
+			content: '/'
+			font-weight: 300
+			font-size: 14px
+			line-height: 16px
+	& a, span
+		font-weight: 300
+		font-size: 14px
+		line-height: 16px
+		white-space: nowrap
+		color: var(--black50)
+	& a:hover
+		color: var(--blue)

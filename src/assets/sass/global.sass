@@ -21,15 +21,19 @@ html
 	font-family: OpenSans, sans-serif
 	&::-webkit-scrollbar
 		width: 6px
-		background-color: var(--light-green)
+		background-color: transparent
 	&::-webkit-scrollbar-thumb
 		border-radius: 6px
-		background-color: var(--green)
+		background-color: var(--blue)
 *, a
 	color: var(--black)
 	letter-spacing: 0.03em
 	font-size: 14px
 	line-height: 25px
+main
+	margin-top: 15px
+	@media(min-width:$md)
+		margin-top: 20px
 
 .fix-box
 	height: 100%
