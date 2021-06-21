@@ -2,6 +2,7 @@
 
 import sliders from './sliders.js';
 import menu from './menu.js';
+import yamaps from './yamaps.js';
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -9,5 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	sliders();
 	menu();
+	yamaps();
 
 });

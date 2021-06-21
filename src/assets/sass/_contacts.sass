@@ -1,0 +1,87 @@
+.contacts
+	&__map-box
+		width: 320px
+		margin-right: auto
+		margin-left: auto
+		margin-bottom: 40px
+		margin-top: 30px
+		@media(min-width: $md)
+			width: 768px
+			position: relative
+			margin-bottom: 60px
+		@media(min-width: $xl)
+			width: 1170px
+			margin-top: 50px
+			margin-bottom: 80px
+	&__list
+		box-shadow: 0px 6px 16px rgba(46, 60, 80, 0.06)
+		background-color: var(--white)
+		border-radius: 10px
+		padding: 20px
+		display: grid
+		grid-template-columns: repeat(1,1fr)
+		grid-gap: 15px
+		width: 290px
+		position: relative
+		top: -30px
+		left: 50%
+		transform: translate(-50%,0)
+		z-index: 10
+		transition: all ease .4s
+		&.active
+			@media(min-width: $md)
+				top: 0
+				transform: translate(-50%,-100%)
+		@media(min-width: $md)
+			width: 708px
+			padding: 30px
+			grid-gap: 30px
+			grid-template-columns: repeat(4,1fr)
+			position: absolute
+			top: 0
+			transform: translate(-50%,-70px)
+		@media(min-width: $xl)
+			width: 830px
+	&__li
+		padding: 10px 0
+		border-radius: 5px
+		background-color: var(--gray-light)
+		display: flex
+		flex-direction: column
+		align-items: center
+		@media(min-width: $md)
+			&:last-child
+				grid-column: span 2
+	&__li-name
+		font-weight: 500
+		font-size: 10px
+		line-height: 190%
+		color: var(--blue)
+		text-align: center
+	&__li-value
+		font-weight: 600
+		font-size: 14px
+		line-height: 145%
+		max-width: 150px
+		text-align: center
+		@media(min-width: $md)
+			max-width: none
+	&__map
+		position: relative
+		width: 100%
+		height: 320px
+		background-image: url('../img/contacts__map-img.png')
+		background-size: cover
+		background-position: center center
+		@media(min-width: $md)
+			height: 500px
+			margin-top: 100px
+		@media(min-width: $xl)
+			border-radius: 10px
+			overflow: hidden
+			margin-top: 120px
+	&__map-img
+		width: 100%
+		height: 100%
+		object-fit: cover
+

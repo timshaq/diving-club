@@ -34,8 +34,41 @@
 </div>
 
 <div class="contacts">
-	<div class="fix-box">
-		
+	<div class="contacts__map-box" id="contactsMapBox">
+		<div class="contacts__map" id="contactsMap">
+		</div>
+		<ul class="contacts__list" id="contactsMapList">
+			<li class="contacts__li">
+				<h3 class="contacts__li-name">
+					Телефон:
+				</h3>
+				<a href="tel:89991234567" class="contacts__li-value">
+					<h4 class="contacts__li-value">
+						8 (999) 123 45 67
+					</h4>
+				</a>
+			</li>
+			<li class="contacts__li">
+				<h3 class="contacts__li-name">
+					Email:
+				</h3>
+				<a href="mailto:diving@club.ru" class="contacts__li-value">
+					<h4 class="contacts__li-value">
+						diving@club.ru
+					</h4>
+				</a>
+			</li>
+			<li class="contacts__li">
+				<h3 class="contacts__li-name">
+					Адрес:
+				</h3>
+				<a href="#" class="contacts__li-value">
+					<h4 class="contacts__li-value">
+						г. Геленджик, ул. Название 12 “А”
+					</h4>
+				</a>
+			</li>
+		</ul>
 	</div>
 
 	<div class="title-page">
@@ -50,7 +83,7 @@
 </div>
 
 </main>
-
+<script src="https://api-maps.yandex.ru/2.1/?apikey=66ea0487-27f6-4686-a2b0-90257242db72&lang=ru_RU" type="text/javascript"></script>
 @@include('assets/html/footer.html')
 
 </body>
