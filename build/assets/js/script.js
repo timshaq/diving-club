@@ -251,6 +251,22 @@
 /******/
 {
   /***/
+  "./src/assets/js/menu.js":
+  /*!*******************************!*\
+    !*** ./src/assets/js/menu.js ***!
+    \*******************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function (module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\nconst menu = document.getElementById('menu');\r\n\r\nconst burgerBtn = document.getElementById('burgerBtn');\r\nconst menuCloseBtn = document.getElementById('menuCloseBtn');\r\n\r\nfunction disableScroll() {\r\n\thtml.style.overflowX = 'hidden';\r\n\thtml.style.overflowY = 'hidden';\r\n};\r\n\r\nfunction enableScroll() {\r\n\thtml.style.overflowX = 'hidden';\r\n\thtml.style.overflowY = 'scroll';\r\n};\r\n\r\nfunction closeEl(el) {\r\n\tel.classList.remove('open');\r\n\tenableScroll();\r\n}\r\n\r\nfunction openEl(el) {\r\n\tel.classList.add('open');\r\n\tdisableScroll();\r\n}\r\n\r\nburgerBtn.addEventListener('click', function() {\r\n\topenEl(menu)\r\n})\r\n\r\nmenuCloseBtn.addEventListener('click', function() {\r\n\tcloseEl(menu)\r\n})\r\n\r\nmenu.addEventListener('click', function(ev) {\r\n\tconsole.log('menuBox click')\r\n\tconst vw = document.documentElement.offsetWidth;\r\n\tconsole.log('vw = ', vw)\r\n\tif(ev.target === this && vw > 767) {\r\n\t\tcloseEl(menu);\r\n\t\tconsole.log('true')\r\n\t}\r\n})\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/menu.js?");
+    /***/
+  },
+
+  /***/
   "./src/assets/js/script.js":
   /*!*********************************!*\
     !*** ./src/assets/js/script.js ***!
@@ -262,7 +278,7 @@
   function (module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tvar header = document.getElementById('header');\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/assets/js/menu.js\");\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tvar header = document.getElementById('header');\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\tObject(_menu_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
     /***/
   },
 
@@ -284,15 +300,15 @@
 
   /***/
   0:
-  /*!******************************************************************!*\
-    !*** multi ./src/assets/js/script.js ./src/assets/js/sliders.js ***!
-    \******************************************************************/
+  /*!******************************************************************************************!*\
+    !*** multi ./src/assets/js/menu.js ./src/assets/js/script.js ./src/assets/js/sliders.js ***!
+    \******************************************************************************************/
 
   /*! no static exports found */
 
   /***/
   function (module, exports, __webpack_require__) {
-    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/script.js_./src/assets/js/sliders.js?");
+    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\menu.js */\"./src/assets/js/menu.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/menu.js_./src/assets/js/script.js_./src/assets/js/sliders.js?");
     /***/
   }
   /******/
