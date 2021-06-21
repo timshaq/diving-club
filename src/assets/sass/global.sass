@@ -13,6 +13,7 @@ $xs: 576px
 	--blue: rgba(0, 96, 187, 1)
 	--border: rgba(51, 51, 51, .1)
 	--gray-light: rgba(249, 249, 249, 1)
+	--black-dark50: rgba(51, 51, 51, .5)
 
 html
 	min-width: 320px
@@ -114,6 +115,37 @@ main
 		border: none
 		background-color: var(--blue)
 		color: var(--white)
+.tabs-box
+	display: grid
+	grid-template-columns: repeat(2,1fr)
+	grid-gap: 10px
+	margin: 20px 0 30px
+	@media(min-width: $md)
+		display: flex
+		justify-content: center
+		margin: 30px 0
+.tab
+	padding: 16px 0px
+	font-size: 14px
+	line-height: 19px
+	color: var(--black-dark50)
+	border-radius: 5px
+	border: 1.5px solid var(--black-dark50)
+	display: flex
+	justify-content: center
+	@media(min-width: $md)
+		width: 216px
+	@media(min-width: $xl)
+		width: 270px
+	& + .tab
+		@media(min-width: $md)
+			margin-left: 30px
+	&:hover
+		color: var(--blue)
+		border-color: var(--blue)
+.tab-active 
+		color: var(--blue)
+		border-color: var(--blue)
 label
 	display: block
 	& span
