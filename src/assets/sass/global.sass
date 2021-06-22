@@ -102,7 +102,7 @@ main
 	font-weight: 600
 	font-size: 14px
 	line-height: 19px
-	padding: 12px 24px
+	padding: 12px 0
 	border-radius: 5px
 	border: 1px solid var(--black)
 	color: var(--black)
@@ -111,7 +111,7 @@ main
 	align-items: center
 	&.btn-blue
 		font-weight: bold
-		padding: 14px 28px
+		padding: 14px 0
 		border: none
 		background-color: var(--blue)
 		color: var(--white)
@@ -133,6 +133,7 @@ main
 	border: 1.5px solid var(--black-dark50)
 	display: flex
 	justify-content: center
+	align-items: center
 	@media(min-width: $md)
 		width: 216px
 	@media(min-width: $xl)
@@ -140,12 +141,22 @@ main
 	& + .tab
 		@media(min-width: $md)
 			margin-left: 30px
-	&:hover
-		color: var(--blue)
-		border-color: var(--blue)
+	@media(min-width: $xl)
+		&:hover
+			color: var(--blue)
+			border-color: var(--blue)
 .tab-active 
 		color: var(--blue)
 		border-color: var(--blue)
+.text-hidden-mob
+	display: none
+	color: inherit
+	@media(min-width: $md)
+		display: inline
+.text-only-mob
+	color: inherit
+	@media(min-width: $md)
+		display: none
 label
 	display: block
 	& span

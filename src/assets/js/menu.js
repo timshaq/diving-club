@@ -34,9 +34,7 @@ menuCloseBtn.addEventListener('click', function() {
 })
 
 menu.addEventListener('click', function(ev) {
-	console.log('menuBox click')
 	const vw = document.documentElement.offsetWidth;
-	console.log('vw = ', vw)
 	if(ev.target === this && vw > 767) {
 		closeEl(menu);
 		console.log('true')
