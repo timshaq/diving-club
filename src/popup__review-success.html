@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru" id="html">
+<head>
+	<title>Попап отзыв. Успех</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+</head>
+
+<body id="body">
+
+@@include('assets/html/header.html')
+
+<main>
+
+<ul class="breadscrumb fix-box">
+	<li class="breadscrumb-item">
+		<a href="#">Главная</a>
+	</li>
+	<li class="breadscrumb-item">
+		<span>Контакты</span>
+	</li>
+</ul>
+
+<div class="title-page">
+	<h1 class="title-page__title">
+		Контакты
+	</h1>
+	<div class="title-page__separator">
+		<img src="assets/img/h1-separator.png" alt="" class="title-page__separator-icon">
+	</div>
+</div>
+
+<div class="contacts">
+	<div class="contacts__map-box" id="contactsMapBox">
+		<div class="contacts__map" id="contactsMap">
+		</div>
+		<ul class="contacts__list" id="contactsMapList">
+			<li class="contacts__li">
+				<h3 class="contacts__li-name">
+					Телефон:
+				</h3>
+				<a href="tel:89991234567" class="contacts__li-value">
+					<h4 class="contacts__li-value">
+						8 (999) 123 45 67
+					</h4>
+				</a>
+			</li>
+			<li class="contacts__li">
+				<h3 class="contacts__li-name">
+					Email:
+				</h3>
+				<a href="mailto:diving@club.ru" class="contacts__li-value">
+					<h4 class="contacts__li-value">
+						diving@club.ru
+					</h4>
+				</a>
+			</li>
+			<li class="contacts__li">
+				<h3 class="contacts__li-name">
+					Адрес:
+				</h3>
+				<a href="#" class="contacts__li-value">
+					<h4 class="contacts__li-value">
+						г. Геленджик, ул. Название 12 “А”
+					</h4>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="title-page">
+		<h2 class="title-page__title">
+			Остались вопросы?
+		</h2>
+		<div class="title-page__separator">
+			<img src="assets/img/h1-separator.png" alt="" class="title-page__separator-icon">
+		</div>
+	</div>
+	@@include('assets/html/quest-box.html')
+</div>
+
+</main>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=66ea0487-27f6-4686-a2b0-90257242db72&lang=ru_RU" type="text/javascript"></script>
+
+<div class="popup-box open">
+	<div class="popup popup-response popup-response-review">
+		<div class="popup-response__icon-box">
+			<img src="assets/img/popup__review-success.svg" alt="" class="popup-response__icon">
+		</div>
+		<div class="popup__title">
+			Ваш отзыв будет размещен после проверки!
+		</div>
+		<button class="popup__btn btn btn-blue">
+			Отлично!
+		</button>
+	</div>
+</div>
+
+<!-- JS функции для открытия/закрытия модалок -->
+<script>
+	function disableScroll() {
+		html.style.overflowX = 'hidden';
+		html.style.overflowY = 'hidden';
+	}
+
+	function enableScroll() {
+		html.style.overflowX = 'hidden';
+		html.style.overflowY = 'scroll';
+	}
+
+	function closeEl(el) {
+		el.classList.remove('open');
+		enableScroll();
+	}
+
+	function openEl(el) {
+		el.classList.add('open');
+		disableScroll();
+	}
+
+	const popupBox = document.querySelector('.popup-box');
+	const okBtn = popupBox.querySelector('.popup__btn');
+
+	// закрыть при клике на задний фон
+	popupBox.addEventListener('click', function(ev) {
+		if(ev.target === this) closeEl(popupBox);
+	})
+
+
+	// закрыть при клике на кнопку ОК
+	okBtn.addEventListener('click', function() {
+		closeEl(popupBox)
+	})
+
+</script>
+<!-- JS функции для открытия/закрытия модалок -->
+
+@@include('assets/html/footer.html')
+
+</body>
+
+
+
+</html>
