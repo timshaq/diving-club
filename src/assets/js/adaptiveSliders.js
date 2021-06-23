@@ -54,4 +54,17 @@ export default function () {
 			})
 	}
 
+	const aboutCertificatesMobSlider = document.getElementById('aboutCertificatesMobSlider')
+
+	if(aboutCertificatesMobSlider) {
+		setAdaptiveSlider(aboutCertificatesMobSlider, 768, {
+			pagination: {
+				el: '#aboutCertificatesMobSliderPagination',
+				type: 'bullets',
+			},
+				slidesPerView: 1,
+				spaceBetween: 10,
+			})
+	}
+
 }

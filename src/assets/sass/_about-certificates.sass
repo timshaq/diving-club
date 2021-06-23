@@ -1,0 +1,59 @@
+.about
+	&__certificates
+
+.about-certificates
+	&__fix-box
+
+	&__phs
+	&__phs-box
+		@media(min-width: $md)
+			display: grid
+			grid-template-columns: repeat(2,1fr)
+			grid-gap: 30px
+		@media(min-width: $xl)
+			grid-template-columns: repeat(3,1fr)
+	&__item
+	&__item-ph
+		width: 100%
+		height: 100%
+		object-fit: contain
+	& .swiper-container
+		padding-bottom: 50px
+	& .swiper-wrapper
+	& .swiper-pagination
+		bottom: 0
+		height: 20px
+		@media(min-width: $md)
+			display: none
+	& .swiper-pagination-bullet
+		width: 20px
+		height: 20px
+		position: relative
+		background-color: var(--white)
+		opacity: 1
+		margin: 0
+		& + .swiper-pagination-bullet
+			margin-left: 10px
+		&:before
+			content: ''
+			width: 12px
+			height: 12px
+			background-color: var(--black10)
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			border-radius: 100%
+	& .swiper-pagination-bullet-active
+		width: 20px
+		height: 20px
+		border: 1px solid var(--blue)
+		&:before
+			background-color: var(--blue)
+	& .swiper-wrapper
+
+	& .swiper-slide
+
+	& .swiper-pagination
+
+

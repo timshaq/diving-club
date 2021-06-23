@@ -1,0 +1,21 @@
+.about-reviews
+	&__fix-box
+	&__list
+		padding-top: 40px
+		@media(min-width: $xl)
+			padding-top: 60px
+		@media(max-width: 1119px)
+			& .reviews__li
+				&:not(:first-child)
+					display: none
+		@media(min-width: $xl)
+			display: grid
+			grid-template-columns: repeat(2,1fr)
+			grid-gap: 30px
+	&__btns-box
+		& .btn
+			width: 190px
+			@media(min-width: $md)
+				width: 216px
+			@media(min-width: $xl)
+				width: 170px
