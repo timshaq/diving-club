@@ -37,5 +37,37 @@ export default function () {
 
 		})
 
+	const servicesTrainBtnsSlidersElementsNL = document.querySelectorAll('.services-train .services-train__content-box .services-train__offers-list .swiper-container')
+	const servicesTrainBtnsSlidersElements = Array.prototype.slice.call(servicesTrainBtnsSlidersElementsNL)
+
+	servicesTrainBtnsSlidersElements.forEach(el => {
+		console.log(el)
+		const slider = new Swiper(el, {
+			mousewheel: true,
+			speed: 1000,
+			autoplay: {
+				delay: 3000,
+			},
+			disableOnInteraction: false,
+			waitForTransition: true,
+			breakpoints: {
+				0: {
+					slidesPerView: 1.145,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 2.326,
+					spaceBetween: 20,
+				},
+				1200: {
+					direction: 'vertical',
+					slidesPerGroup: 5,
+					slidesPerView: 5,
+					spaceBetween: 20,
+				}
+			}
+		})
+	})
+
 
 }

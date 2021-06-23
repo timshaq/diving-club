@@ -37,30 +37,6 @@ export default function () {
 		})
 	}
 
-	const servicesTrainBtnsSlidersElementsNL = document.querySelectorAll('.services-train .services-train__content-box .services-train__offers-list .swiper-container')
-	const servicesTrainBtnsSlidersElements = Array.prototype.slice.call(servicesTrainBtnsSlidersElementsNL)
-
-	servicesTrainBtnsSlidersElements.forEach(el => {
-		console.log(el)
-		const slider = new Swiper(el, {
-			breakpoints: {
-				0: {
-					slidesPerView: 1.145,
-					spaceBetween: 10,
-				},
-				768: {
-					slidesPerView: 2.326,
-					spaceBetween: 20,
-				},
-				1200: {
-					direction: 'vertical',
-					slidesPerView: 6,
-					spaceBetween: 20,
-				}
-			}
-		})
-	})
-
 
 	const articleAsideSlider = document.getElementById('articleAsideSlider');
 	if(articleAsideSlider) {

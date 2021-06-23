@@ -4,9 +4,21 @@
 	&__tab
 
 	&__content-box
+		position: absolute
+		opacity: 0
+		visibility: hidden
+		width: 290px
+		@media(min-width: $md)
+			width: 708px
 		@media(min-width: $xl)
+			width: 1170px
 			display: flex
 			justify-content: space-between
+		&.active
+			position: relative
+			opacity: 1
+			visibility: visible
+			width: 100%
 	&__offers-list
 
 	&__content
@@ -19,16 +31,11 @@
 		@media(min-width: $xl)
 			order: 2
 			width: 270px
-			height: 605px
-			max-height: 605px
 			margin: 0
-			overflow: hidden
-			&.swiper-container
-				height: 605px
-				max-height: 605px
-			&.swiper-wrapper
-				height: 605px
-				max-height: 605px
+			position: relative
+			height: 500px
+			& .swiper-container
+				height: 500px
 	&__offers-btn
 
 
@@ -38,9 +45,6 @@
 	align-items: center
 	background-color: var(--white)
 	box-shadow: 0px 0px 25px -3px rgba(46, 60, 80, 0.07)
-	@media(min-width: $xl)
-		height: 100px
-		max-height: 100px
 	&__ph-box
 		width: 60px
 		height: 60px

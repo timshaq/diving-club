@@ -19,5 +19,24 @@ export default function () {
 		})
 	}
 
+	const servicesTrain = document.getElementById('servicesTrain');
+	if(servicesTrain) {
+		const servicesTrainTabsNL = servicesTrain.querySelectorAll('.tabs-box .tab');
+		const servicesTrainTabs = Array.prototype.slice.call(servicesTrainTabsNL);
+		
+		const servicesTrainContentsNL = servicesTrain.querySelectorAll('.services-train__content-box');
+		const servicesTrainContents = Array.prototype.slice.call(servicesTrainContentsNL);
+
+		servicesTrainTabs.forEach((tab, index) => {
+			tab.addEventListener('click', function() {
+				servicesTrainTabs.forEach(el => el.classList.remove('tab-active'))
+				tab.classList.add('tab-active')
+
+				servicesTrainContents.forEach(el => el.classList.remove('active'))
+				servicesTrainContents[index].classList.add('active')
+			})
+		})
+	}
+
 
 }
