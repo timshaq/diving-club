@@ -251,6 +251,22 @@
 /******/
 {
   /***/
+  "./src/assets/js/adaptiveSliders.js":
+  /*!******************************************!*\
+    !*** ./src/assets/js/adaptiveSliders.js ***!
+    \******************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function (module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tfunction setAdaptiveSlider(el, match, config) {\r\n\r\n\t\tconst sliderEl = el;\r\n\t\tif(!sliderEl) return\r\n\r\n\t\tconst breakpointMob = window.matchMedia(`(min-width:${match}px)`)\r\n\r\n\t\tlet slider;\r\n\r\n\t\tconst enableSlider = function() {\r\n\t\t\tslider = new Swiper(sliderEl, config)\r\n\t\t}\r\n\r\n\t\tconst breakpointChecker = function() {\r\n\t\t\tif(breakpointMob.matches === true) {\r\n\t\t\t\tif(slider !== undefined) slider.destroy(true,true);\r\n\t\t\t\treturn;\r\n\t\t\t} else if (breakpointMob.matches === false) {\r\n\t\t\t\treturn enableSlider();\r\n\t\t\t}\r\n\t\t}\r\n\t\tbreakpointMob.addListener(breakpointChecker);\r\n\t\tbreakpointChecker();\r\n\t}\r\n\r\n\tconst servicesPlacesSlidersElementsNL = document.querySelectorAll('.services-places .services-places__content-box .swiper-container')\r\n\tconst servicesPlacesSlidersElements = Array.prototype.slice.call(servicesPlacesSlidersElementsNL)\r\n\r\n\tif(servicesPlacesSlidersElements.length > 0) {\r\n\t\tservicesPlacesSlidersElements.forEach(el => {\r\n\t\t\tsetAdaptiveSlider(el, 768, {\r\n\t\t\t\t\tslidesPerView: 1.23,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t})\r\n\t\t})\r\n\t}\r\n\r\n\tconst servicesTrainBtnsSlidersElementsNL = document.querySelectorAll('.services-train .services-train__content-box .services-train__offers-list .swiper-container')\r\n\tconst servicesTrainBtnsSlidersElements = Array.prototype.slice.call(servicesTrainBtnsSlidersElementsNL)\r\n\r\n\tservicesTrainBtnsSlidersElements.forEach(el => {\r\n\t\tconsole.log(el)\r\n\t\tconst slider = new Swiper(el, {\r\n\t\t\tbreakpoints: {\r\n\t\t\t\t0: {\r\n\t\t\t\t\tslidesPerView: 1.145,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t},\r\n\t\t\t\t768: {\r\n\t\t\t\t\tslidesPerView: 2.326,\r\n\t\t\t\t\tspaceBetween: 20,\r\n\t\t\t\t},\r\n\t\t\t\t1200: {\r\n\t\t\t\t\tdirection: 'vertical',\r\n\t\t\t\t\tslidesPerView: 6,\r\n\t\t\t\t\tspaceBetween: 20,\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t})\r\n\t})\r\n\r\n\r\n\tconst articleAsideSlider = document.getElementById('articleAsideSlider');\r\n\tif(articleAsideSlider) {\r\n\t\tsetAdaptiveSlider(articleAsideSlider, 1200, {\r\n\t\t\tbreakpoints: {\r\n\t\t\t\t0: {\r\n\t\t\t\t\tslidesPerView: 1.23,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t},\r\n\t\t\t\t768: {\r\n\t\t\t\t\tslidesPerView: 2,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t},\r\n\t\t\t}\r\n\t\t\t})\r\n\t}\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/adaptiveSliders.js?");
+    /***/
+  },
+
+  /***/
   "./src/assets/js/menu.js":
   /*!*******************************!*\
     !*** ./src/assets/js/menu.js ***!
@@ -278,23 +294,7 @@
   function (module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/assets/js/menu.js\");\n/* harmony import */ var _yamaps_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./yamaps.js */ \"./src/assets/js/yamaps.js\");\n/* harmony import */ var _serviceSliders_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./serviceSliders.js */ \"./src/assets/js/serviceSliders.js\");\n/* harmony import */ var _serviceTabs_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./serviceTabs.js */ \"./src/assets/js/serviceTabs.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tvar header = document.getElementById('header');\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\tObject(_menu_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\tObject(_yamaps_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\tObject(_serviceSliders_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n\tObject(_serviceTabs_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
-    /***/
-  },
-
-  /***/
-  "./src/assets/js/serviceSliders.js":
-  /*!*****************************************!*\
-    !*** ./src/assets/js/serviceSliders.js ***!
-    \*****************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function (module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tfunction setAdaptiveSlider(el, match, config) {\r\n\r\n\t\tconst sliderEl = el;\r\n\t\tif(!sliderEl) return\r\n\r\n\t\tconst breakpointMob = window.matchMedia(`(min-width:${match}px)`)\r\n\r\n\t\tlet slider;\r\n\r\n\t\tconst enableSlider = function() {\r\n\t\t\tslider = new Swiper(sliderEl, config)\r\n\t\t}\r\n\r\n\t\tconst breakpointChecker = function() {\r\n\t\t\tif(breakpointMob.matches === true) {\r\n\t\t\t\tif(slider !== undefined) slider.destroy(true,true);\r\n\t\t\t\treturn;\r\n\t\t\t} else if (breakpointMob.matches === false) {\r\n\t\t\t\treturn enableSlider();\r\n\t\t\t}\r\n\t\t}\r\n\t\tbreakpointMob.addListener(breakpointChecker);\r\n\t\tbreakpointChecker();\r\n\t}\r\n\r\n\tconst servicesPlacesSlidersElementsNL = document.querySelectorAll('.services-places .services-places__content-box .swiper-container')\r\n\tconst servicesPlacesSlidersElements = Array.prototype.slice.call(servicesPlacesSlidersElementsNL)\r\n\r\n\tif(servicesPlacesSlidersElements.length > 0) {\r\n\t\tservicesPlacesSlidersElements.forEach(el => {\r\n\t\t\tsetAdaptiveSlider(el, 768, {\r\n\t\t\t\t\tslidesPerView: 1.23,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t})\r\n\t\t})\r\n\t}\r\n\r\n\tconst servicesTrainBtnsSlidersElementsNL = document.querySelectorAll('.services-train .services-train__content-box .services-train__offers-list .swiper-container')\r\n\tconst servicesTrainBtnsSlidersElements = Array.prototype.slice.call(servicesTrainBtnsSlidersElementsNL)\r\n\r\n\tservicesTrainBtnsSlidersElements.forEach(el => {\r\n\t\tconsole.log(el)\r\n\t\tconst slider = new Swiper(el, {\r\n\t\t\tbreakpoints: {\r\n\t\t\t\t0: {\r\n\t\t\t\t\tslidesPerView: 1.145,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t},\r\n\t\t\t\t768: {\r\n\t\t\t\t\tslidesPerView: 2.326,\r\n\t\t\t\t\tspaceBetween: 20,\r\n\t\t\t\t},\r\n\t\t\t\t1200: {\r\n\t\t\t\t\tdirection: 'vertical',\r\n\t\t\t\t\tslidesPerView: 6,\r\n\t\t\t\t\tspaceBetween: 20,\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t})\r\n\t})\r\n\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/serviceSliders.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/assets/js/menu.js\");\n/* harmony import */ var _yamaps_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./yamaps.js */ \"./src/assets/js/yamaps.js\");\n/* harmony import */ var _adaptiveSliders_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./adaptiveSliders.js */ \"./src/assets/js/adaptiveSliders.js\");\n/* harmony import */ var _serviceTabs_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./serviceTabs.js */ \"./src/assets/js/serviceTabs.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tvar header = document.getElementById('header');\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\tObject(_menu_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\tObject(_yamaps_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\tObject(_adaptiveSliders_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n\tObject(_serviceTabs_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
     /***/
   },
 
@@ -310,7 +310,7 @@
   function (module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst servicesPlaces = document.getElementById('servicesPlaces');\r\n\r\n\tconst servicesPlacesTabsNL = servicesPlaces.querySelectorAll('.tabs-box .tab');\r\n\tconst servicesPlacesTabs = Array.prototype.slice.call(servicesPlacesTabsNL);\r\n\t\r\n\tconst servicesPlacesContentsNL = servicesPlaces.querySelectorAll('.services-places__content');\r\n\tconst servicesPlacesContents = Array.prototype.slice.call(servicesPlacesContentsNL);\r\n\r\n\tservicesPlacesTabs.forEach((tab, index) => {\r\n\t\ttab.addEventListener('click', function() {\r\n\t\t\tservicesPlacesTabs.forEach(el => el.classList.remove('tab-active'))\r\n\t\t\ttab.classList.add('tab-active')\r\n\r\n\t\t\tservicesPlacesContents.forEach(el => el.classList.remove('active'))\r\n\t\t\tservicesPlacesContents[index].classList.add('active')\r\n\t\t})\r\n\t})\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/serviceTabs.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst servicesPlaces = document.getElementById('servicesPlaces');\r\n\tif(servicesPlaces) {\r\n\t\tconst servicesPlacesTabsNL = servicesPlaces.querySelectorAll('.tabs-box .tab');\r\n\t\tconst servicesPlacesTabs = Array.prototype.slice.call(servicesPlacesTabsNL);\r\n\t\t\r\n\t\tconst servicesPlacesContentsNL = servicesPlaces.querySelectorAll('.services-places__content');\r\n\t\tconst servicesPlacesContents = Array.prototype.slice.call(servicesPlacesContentsNL);\r\n\r\n\t\tservicesPlacesTabs.forEach((tab, index) => {\r\n\t\t\ttab.addEventListener('click', function() {\r\n\t\t\t\tservicesPlacesTabs.forEach(el => el.classList.remove('tab-active'))\r\n\t\t\t\ttab.classList.add('tab-active')\r\n\r\n\t\t\t\tservicesPlacesContents.forEach(el => el.classList.remove('active'))\r\n\t\t\t\tservicesPlacesContents[index].classList.add('active')\r\n\t\t\t})\r\n\t\t})\r\n\t}\r\n\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/serviceTabs.js?");
     /***/
   },
 
@@ -326,7 +326,7 @@
   function (module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst indexHeroSlider = new Swiper('#indexHeroSlider', {\r\n\t\t\tnavigation: {\r\n\t\t\t\tnextEl: '#indexHeroSliderNextBtn',\r\n\t\t\t\tprevEl: '#indexHeroSliderPrevBtn',\r\n\t\t\t},\r\n\t\t\tpagination: {\r\n\t\t\t\tel: '#indexHeroSliderPagination',\r\n\t\t\t\ttype: 'fraction',\r\n\t\t\t},\r\n\t\t\tslidesPerView: 1,\r\n\t\t\tspaceBetween: 10,\r\n\r\n\t\t})\r\n\r\n\tconst servicesTripSlider = new Swiper('#servicesTripSlider', {\r\n\t\t\tpagination: {\r\n\t\t\t\tel: '#servicesTripSliderPagination',\r\n\t\t\t\ttype: 'bullets',\r\n\t\t\t},\r\n\t\t\twatchOverflow: true,\r\n\t\t\tbreakpoints: {\r\n\t\t\t\t0: {\r\n\t\t\t\t\tslidesPerView: 1.23,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t},\r\n\t\t\t\t768: {\r\n\t\t\t\t\tslidesPerView: 2,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t},\r\n\t\t\t\t1200: {\r\n\t\t\t\t\tslidesPerView: 3,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t})\r\n\r\n\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/sliders.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst indexHeroSlider = new Swiper('#indexHeroSlider', {\r\n\t\t\tnavigation: {\r\n\t\t\t\tnextEl: '#indexHeroSliderNextBtn',\r\n\t\t\t\tprevEl: '#indexHeroSliderPrevBtn',\r\n\t\t\t},\r\n\t\t\tpagination: {\r\n\t\t\t\tel: '#indexHeroSliderPagination',\r\n\t\t\t\ttype: 'fraction',\r\n\t\t\t},\r\n\t\t\tslidesPerView: 1,\r\n\t\t\tspaceBetween: 10,\r\n\r\n\t\t})\r\n\r\n\tconst servicesTripSlider = new Swiper('#servicesTripSlider', {\r\n\t\t\tpagination: {\r\n\t\t\t\tel: '#servicesTripSliderPagination',\r\n\t\t\t\ttype: 'bullets',\r\n\t\t\t},\r\n\t\t\twatchOverflow: true,\r\n\t\t\tbreakpoints: {\r\n\t\t\t\t0: {\r\n\t\t\t\t\tslidesPerView: 1.23,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t},\r\n\t\t\t\t768: {\r\n\t\t\t\t\tslidesPerView: 2,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t},\r\n\t\t\t\t1200: {\r\n\t\t\t\t\tslidesPerView: 3,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t})\r\n\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/sliders.js?");
     /***/
   },
 
@@ -348,15 +348,15 @@
 
   /***/
   0:
-  /*!*************************************************************************************************************************************************************************************!*\
-    !*** multi ./src/assets/js/menu.js ./src/assets/js/script.js ./src/assets/js/serviceSliders.js ./src/assets/js/serviceTabs.js ./src/assets/js/sliders.js ./src/assets/js/yamaps.js ***!
-    \*************************************************************************************************************************************************************************************/
+  /*!**************************************************************************************************************************************************************************************!*\
+    !*** multi ./src/assets/js/adaptiveSliders.js ./src/assets/js/menu.js ./src/assets/js/script.js ./src/assets/js/serviceTabs.js ./src/assets/js/sliders.js ./src/assets/js/yamaps.js ***!
+    \**************************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
   /***/
   function (module, exports, __webpack_require__) {
-    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\menu.js */\"./src/assets/js/menu.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\serviceSliders.js */\"./src/assets/js/serviceSliders.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\serviceTabs.js */\"./src/assets/js/serviceTabs.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\yamaps.js */\"./src/assets/js/yamaps.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/menu.js_./src/assets/js/script.js_./src/assets/js/serviceSliders.js_./src/assets/js/serviceTabs.js_./src/assets/js/sliders.js_./src/assets/js/yamaps.js?");
+    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\adaptiveSliders.js */\"./src/assets/js/adaptiveSliders.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\menu.js */\"./src/assets/js/menu.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\serviceTabs.js */\"./src/assets/js/serviceTabs.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\yamaps.js */\"./src/assets/js/yamaps.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/adaptiveSliders.js_./src/assets/js/menu.js_./src/assets/js/script.js_./src/assets/js/serviceTabs.js_./src/assets/js/sliders.js_./src/assets/js/yamaps.js?");
     /***/
   }
   /******/

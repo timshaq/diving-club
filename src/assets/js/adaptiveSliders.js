@@ -62,4 +62,20 @@ export default function () {
 	})
 
 
+	const articleAsideSlider = document.getElementById('articleAsideSlider');
+	if(articleAsideSlider) {
+		setAdaptiveSlider(articleAsideSlider, 1200, {
+			breakpoints: {
+				0: {
+					slidesPerView: 1.23,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 30,
+				},
+			}
+			})
+	}
+
 }

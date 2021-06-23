@@ -1,0 +1,152 @@
+.article
+	&__fix-box
+		@media(min-width: $xl)
+			display: flex
+			justify-content: space-between
+	&__content
+		@media(min-width: $xl)
+			width: 770px
+	&__aside
+		margin-top: 40px
+		@media(min-width: $md)
+			margin-top: 60px
+		@media(min-width: $xl)
+			margin-top: 0
+			width: 370px
+.article-content
+	&__header
+
+	&__title
+		font-family: PlayfairDisplay
+		font-style: normal
+		font-weight: 900
+		font-size: 18px
+		line-height: 24px
+		letter-spacing: 0.05em
+		padding-bottom: 15px
+		border-bottom: 1px solid var(--black10)
+		margin-bottom: 10px
+		@media(min-width: $md)
+			font-size: 30px
+			line-height: 40px
+			margin-bottom: 15px
+	&__info
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: center
+		margin: 10px 0 20px
+		@media(min-width: $md)
+			margin: 15px 0 35px
+			flex-wrap: nowrap
+	&__tags
+		display: flex
+		flex-wrap: wrap
+		column-gap: 10px
+		row-gap: 10px
+		width: 100%
+		@media(min-width: $md)
+			width: auto
+			column-gap: 15px
+			row-gap: 15px
+	&__tag
+		font-size: 14px
+		line-height: 22px
+		color: var(--blue)
+	&__date
+		font-size: 14px
+		line-height: 22px
+		color: var(--black50)
+		margin-right: auto
+		margin-top: 10px
+		@media(min-width: $md)
+			margin-right: 0
+			margin-left: 15px
+			margin-top: 0
+	&__text
+		& img
+			border-radius: 10px
+			overflow: hidden
+			width: 100%
+			& + p
+				font-size: 10px
+				line-height: 16px
+				margin-top: 7px
+				margin-bottom: 20px
+				@media(min-width: $md)
+					margin-top: 10px
+					margin-bottom: 30px
+				& + p
+					margin-top: 20px
+					@media(min-width: $md)
+						margin-top: 30px
+		& h2
+			font-family: PlayfairDisplay
+			font-style: normal
+			font-weight: 900
+			font-size: 18px
+			line-height: 24px
+			letter-spacing: 0.05em
+			margin-top: 40px
+			margin-bottom: 20px
+			@media(min-width: $md)
+				margin-top: 30px
+				margin-bottom: 30px
+			@media(min-width: $xl)
+				margin-top: 40px
+				margin-bottom: 30px
+		& p
+			font-size: 14px
+			line-height: 25px
+			color: var(--black50)
+			margin-top: 35px
+			margin-bottom: 35px
+			@media(min-width: $md)
+				margin-top: 40px
+				margin-bottom: 40px
+	&__text-phs
+		@media(min-width: $md)
+			display: grid
+			grid-template-columns: repeat(2,1fr)
+			grid-gap: 30px
+		& + p
+			margin-top: 0
+	&__text-ph
+		&:not(:first-child)
+			display: none
+			@media(min-width: $md)
+				display: block
+	&__author
+		font-family: PlayfairDisplay
+		font-style: normal
+		font-weight: bold
+		font-size: 16px
+		line-height: 26px
+		letter-spacing: 0.03em
+		margin-top: 20px
+		@media(min-width: $md)
+			font-size: 20px
+			line-height: 32px
+			margin-top: 30px
+		@media(min-width: $xl)
+			margin-top: 60px
+
+.article-aside
+	&__title
+		font-family: PlayfairDisplay
+		font-style: normal
+		font-weight: 900
+		font-size: 24px
+		line-height: 32px
+		letter-spacing: 0.05em
+		@media(min-width: $xl)
+			font-size: 20px
+			line-height: 27px
+			padding-bottom: 15px
+			border-bottom: 1px solid var(--black10)
+	&__list
+		margin-top: 20px
+	& .swiper-wrapper
+		@media(min-width: $xl)
+			display: grid
+			grid-gap: 30px
