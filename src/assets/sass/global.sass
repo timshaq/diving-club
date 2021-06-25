@@ -57,6 +57,11 @@ main
 	@media(min-width:$xl)
 		margin-top: 20px
 		margin-bottom: 50px
+	&.white
+		& .title-page__title
+			color: var(--white)
+		& .title-page__subtitle
+			color: var(--white60)
 	&__title
 		font-family: PlayfairDisplay
 		font-style: normal
@@ -134,6 +139,12 @@ main
 		border: none
 		background-color: var(--blue)
 		color: var(--white)
+	&.btn-white
+		font-weight: bold
+		padding: 14px 0
+		border: none
+		background-color: var(--white)
+		color: var(--blue)
 .tabs-box
 	display: grid
 	grid-template-columns: repeat(2,1fr)

@@ -1,0 +1,59 @@
+.index-reviews
+	background-image: url(../img/index-reviews-bg__mob.png)
+	background-color: var(--black)
+	background-size: cover
+	background-position: center center
+	padding-top: 40px
+	padding-bottom: 30px
+	@media(min-width: $md)
+		padding-top: 60px
+		padding-bottom: 60px
+		background-image: url(../img/index-reviews-bg__tab.png)
+	@media(min-width: $xl)
+		padding-top: 80px
+		background-image: url(../img/index-reviews-bg__desk.png)
+	& .reviews__li
+		background: linear-gradient(136.38deg, rgba(225, 225, 225, 0.25) 0%, rgba(225, 225, 225, 0.0875) 100%)
+		backdrop-filter: blur(27px)
+		height: auto
+	& .review__author,
+	& .review__service-name,
+	& .review__date
+		color: var(--white)
+	& .review__text
+		color: var(--white60)
+	&__list
+	&.swiper-slide
+		height: auto
+	& .swiper-container
+		padding-bottom: 50px
+		padding-top: 50px
+	& .swiper-wrapper
+	& .swiper-pagination
+		bottom: 0
+		height: 20px
+	& .swiper-pagination-bullet
+		width: 20px
+		height: 20px
+		position: relative
+		background-color: transparent
+		opacity: 1
+		margin: 0
+		& + .swiper-pagination-bullet
+			margin-left: 10px
+		&:before
+			content: ''
+			width: 12px
+			height: 12px
+			background-color: var(--white60)
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			border-radius: 100%
+	& .swiper-pagination-bullet-active
+		width: 20px
+		height: 20px
+		border: 1px solid var(--white)
+		&:before
+			background-color: var(--black)
