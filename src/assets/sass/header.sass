@@ -2,6 +2,81 @@
 	background-color: var(--white)
 	box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.07)
 	padding: 19px 0
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	z-index: 30
+	&.header-transparent
+		background: transparent
+		box-shadow: none
+		& .header__tel-link-text,
+		& .header__tel-callback,
+		& .header__nav-a
+			color: var(--white)
+		& .header__nav-a
+			&:hover
+				color: var(--blue)
+		& .header__tel-callback
+			border-bottom: 1.5px dashed var(--white)
+		@media(max-width: $xl)
+			& .header__burger-icon
+				display: none
+				&.burger-transparent
+					display: block
+			& .header__tel-link-icon.logo-mob
+				display: none
+				&.tel-link-icon-transparent
+					display: block
+			& .header__logo.logo-mob
+				display: none
+				&.logo-transparent
+					display: block
+		@media(min-width: $md)
+			& .header__logo.logo-tab
+				display: none
+				&.logo-transparent
+					display: block
+		@media(min-width: $xl)
+			& .header__tel-link-icon.logo-pc
+				display: none
+				&.tel-link-icon-transparent
+					display: block
+	&.active
+		padding: 5px 0
+		background-color: var(--white)
+		box-shadow: 0px 5px 20px -5px rgba(0, 0, 0, 0.07)
+		& .header__tel-callback
+			display: none
+		& .header__tel-link-text,
+		& .header__tel-callback,
+		& .header__nav-a
+			color: var(--black)
+		& .header__tel-callback
+			border-bottom: 1.5px dashed var(--white)
+		@media(max-width: $xl)
+			& .header__burger-icon
+				display: block
+				&.burger-transparent
+					display: none
+			& .header__tel-link-icon.logo-mob
+				display: block
+				&.tel-link-icon-transparent
+					display: none
+			& .header__logo.logo-mob
+				display: block
+				&.logo-transparent
+					display: none
+		@media(min-width: $md)
+			& .header__logo.logo-tab
+				display: block
+				&.logo-transparent
+					display: none
+		@media(min-width: $xl)
+			& .header__tel-link-icon.logo-pc
+				display: block
+				&.tel-link-icon-transparent
+					display: none
 	&__fix-box
 		display: flex
 		justify-content: space-between

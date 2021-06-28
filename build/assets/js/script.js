@@ -267,6 +267,22 @@
   },
 
   /***/
+  "./src/assets/js/headerFix.js":
+  /*!************************************!*\
+    !*** ./src/assets/js/headerFix.js ***!
+    \************************************/
+
+  /*! exports provided: default */
+
+  /***/
+  function (module, __webpack_exports__, __webpack_require__) {
+    "use strict";
+
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst header = document.getElementById('header');\r\n\r\n\tfunction setHeaderActiveClass() {\r\n\t\tconst scrollTop = document.documentElement.scrollTop;\r\n\t\tif (scrollTop > 98) header.classList.add('active')\r\n\t\tif (scrollTop < 98) header.classList.remove('active')\r\n\t}\r\n\r\n\tdocument.addEventListener('scroll', function() {\r\n\t\tsetHeaderActiveClass()\r\n\t})\r\n\r\n\tsetHeaderActiveClass()\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/headerFix.js?");
+    /***/
+  },
+
+  /***/
   "./src/assets/js/indexTabs.js":
   /*!************************************!*\
     !*** ./src/assets/js/indexTabs.js ***!
@@ -310,7 +326,7 @@
   function (module, __webpack_exports__, __webpack_require__) {
     "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/assets/js/menu.js\");\n/* harmony import */ var _yamaps_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./yamaps.js */ \"./src/assets/js/yamaps.js\");\n/* harmony import */ var _adaptiveSliders_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./adaptiveSliders.js */ \"./src/assets/js/adaptiveSliders.js\");\n/* harmony import */ var _serviceTabs_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./serviceTabs.js */ \"./src/assets/js/serviceTabs.js\");\n/* harmony import */ var _indexTabs_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./indexTabs.js */ \"./src/assets/js/indexTabs.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tvar header = document.getElementById('header');\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\tObject(_menu_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\tObject(_yamaps_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\tObject(_adaptiveSliders_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n\tObject(_serviceTabs_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\r\n\tObject(_indexTabs_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
+    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/assets/js/menu.js\");\n/* harmony import */ var _yamaps_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./yamaps.js */ \"./src/assets/js/yamaps.js\");\n/* harmony import */ var _adaptiveSliders_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./adaptiveSliders.js */ \"./src/assets/js/adaptiveSliders.js\");\n/* harmony import */ var _serviceTabs_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./serviceTabs.js */ \"./src/assets/js/serviceTabs.js\");\n/* harmony import */ var _indexTabs_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./indexTabs.js */ \"./src/assets/js/indexTabs.js\");\n/* harmony import */ var _headerFix_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./headerFix.js */ \"./src/assets/js/headerFix.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\tObject(_menu_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\tObject(_yamaps_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\tObject(_adaptiveSliders_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n\tObject(_serviceTabs_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\r\n\tObject(_indexTabs_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\r\n\tObject(_headerFix_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
     /***/
   },
 
@@ -364,15 +380,15 @@
 
   /***/
   0:
-  /*!*******************************************************************************************************************************************************************************************************************!*\
-    !*** multi ./src/assets/js/adaptiveSliders.js ./src/assets/js/indexTabs.js ./src/assets/js/menu.js ./src/assets/js/script.js ./src/assets/js/serviceTabs.js ./src/assets/js/sliders.js ./src/assets/js/yamaps.js ***!
-    \*******************************************************************************************************************************************************************************************************************/
+  /*!************************************************************************************************************************************************************************************************************************************************!*\
+    !*** multi ./src/assets/js/adaptiveSliders.js ./src/assets/js/headerFix.js ./src/assets/js/indexTabs.js ./src/assets/js/menu.js ./src/assets/js/script.js ./src/assets/js/serviceTabs.js ./src/assets/js/sliders.js ./src/assets/js/yamaps.js ***!
+    \************************************************************************************************************************************************************************************************************************************************/
 
   /*! no static exports found */
 
   /***/
   function (module, exports, __webpack_require__) {
-    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\adaptiveSliders.js */\"./src/assets/js/adaptiveSliders.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\indexTabs.js */\"./src/assets/js/indexTabs.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\menu.js */\"./src/assets/js/menu.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\serviceTabs.js */\"./src/assets/js/serviceTabs.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\yamaps.js */\"./src/assets/js/yamaps.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/adaptiveSliders.js_./src/assets/js/indexTabs.js_./src/assets/js/menu.js_./src/assets/js/script.js_./src/assets/js/serviceTabs.js_./src/assets/js/sliders.js_./src/assets/js/yamaps.js?");
+    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\adaptiveSliders.js */\"./src/assets/js/adaptiveSliders.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\headerFix.js */\"./src/assets/js/headerFix.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\indexTabs.js */\"./src/assets/js/indexTabs.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\menu.js */\"./src/assets/js/menu.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\serviceTabs.js */\"./src/assets/js/serviceTabs.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\yamaps.js */\"./src/assets/js/yamaps.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/adaptiveSliders.js_./src/assets/js/headerFix.js_./src/assets/js/indexTabs.js_./src/assets/js/menu.js_./src/assets/js/script.js_./src/assets/js/serviceTabs.js_./src/assets/js/sliders.js_./src/assets/js/yamaps.js?");
     /***/
   }
   /******/
