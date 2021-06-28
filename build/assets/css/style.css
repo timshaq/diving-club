@@ -2581,6 +2581,14 @@ label textarea {
   color: var(--white60);
 }
 
+.index-train__small {
+  display: block;
+  text-align: center;
+  color: var(--white);
+  font-size: 14px;
+  line-height: 22px;
+}
+
 .index-train__bg-icon-box {
   width: 63px;
   height: 63px;
@@ -2754,6 +2762,39 @@ label textarea {
   letter-spacing: 0.05em;
   color: var(--white);
   margin-top: auto;
+}
+
+.index-about__link {
+  width: 190px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .index-about__link {
+    width: 216px;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .index-about__link {
+    width: 170px;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 1200px) {
+  .index-about .about-hero-item__ph-box {
+    width: 570px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .index-about .about-hero-item__text {
+    width: 570px;
+  }
 }
 
 .reviews__list {
