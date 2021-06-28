@@ -1,0 +1,95 @@
+.index-test
+	padding-top: 30px
+	padding-bottom: 30px
+	background-color: var(--black)
+	background-image: url('../img/index-test-bg__01.png')
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center center
+	@media(min-width: $md)
+		padding-top: 60px
+		padding-bottom: 50px
+		background-image: url('../img/index-test-bg__02.png')
+	@media(min-width: $xl)
+		padding-bottom: 60px
+		background-image: url('../img/index-test-bg__03.png')
+	&__fix-box
+		@media(min-width: $xl)
+			width: 970px
+	&__title
+		font-family: PlayfairDisplay
+		font-style: normal
+		font-weight: 900
+		font-size: 24px
+		line-height: 36px
+		text-align: center
+		letter-spacing: 0.05em
+		color: var(--white)
+		@media(min-width: $md)
+			font-size: 30px
+			line-height: 45px
+		@media(min-width: $xl)
+			font-size: 36px
+			line-height: 54px
+	&__subtitle
+		font-size: 14px
+		line-height: 19px
+		color: var(--white)
+		text-align: center
+		margin-top: 15px
+		@media(min-width: $md)
+			font-size: 16px
+			line-height: 22px
+		@media(min-width: $xl)
+			font-weight: 600
+			font-size: 20px
+			line-height: 27px
+			margin-top: 25px
+	&__fieldset
+		display: grid
+		grid-gap: 15px
+		margin-top: 30px
+		margin-bottom: 25px
+		@media(min-width: $md)
+			display: flex
+			flex-wrap: wrap
+			justify-content: space-between
+			margin-top: 40px
+			margin-bottom: 50px
+		@media(min-width: $xl)
+			margin-top: 50px
+	&__label
+		@media(min-width: $md)
+			width: 340px
+		@media(min-width: $xl)
+			width: 370px
+	&__input
+		font-size: 16px
+		line-height: 22px
+		color: var(--white60)
+		background: rgba(255, 255, 255, 0.3)
+		&::placeholder
+			color: var(--white60)
+	&__submit
+		@media(min-width: $md)
+			width: 216px
+			margin-right: auto
+			margin-left: auto
+			margin-top: 40px
+		@media(min-width: $xl)
+			width: 170px
+			margin-right: 0
+			margin-left: 0
+			margin-top: 0
+	&__p
+		font-size: 14px
+		line-height: 19px
+		color: var(--white80)
+		text-align: center
+		@media(min-width: $md)
+			font-size: 16px
+			line-height: 22px
+		@media(min-width: $xl)
+			width: 770px
+			margin-right: auto
+			margin-left: auto

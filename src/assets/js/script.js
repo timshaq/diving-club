@@ -5,6 +5,7 @@ import menu from './menu.js';
 import yamaps from './yamaps.js';
 import adaptiveSliders from './adaptiveSliders.js';
 import serviceTabs from './serviceTabs.js';
+import indexTabs from './indexTabs.js';
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -15,5 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	yamaps();
 	adaptiveSliders();
 	serviceTabs();
+	indexTabs();
 
 });

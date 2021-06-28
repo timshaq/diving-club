@@ -37,6 +37,18 @@ export default function () {
 		})
 	}
 
+	const indexPriceSlidersElementsNL = document.querySelectorAll('.index-price .index-price__content-box .swiper-container')
+	const indexPriceSlidersElements = Array.prototype.slice.call(indexPriceSlidersElementsNL)
+
+	if(indexPriceSlidersElements.length > 0) {
+		indexPriceSlidersElements.forEach(el => {
+			setAdaptiveSlider(el, 768, {
+					slidesPerView: 1.23,
+					spaceBetween: 10,
+				})
+		})
+	}
+
 
 	const articleAsideSlider = document.getElementById('articleAsideSlider');
 	if(articleAsideSlider) {

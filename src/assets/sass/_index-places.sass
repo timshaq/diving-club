@@ -1,0 +1,195 @@
+.index-places
+	&__fix-box
+	&__slider-fix-box
+		@media(min-width: $md)
+			width: 768px
+		@media(min-width: 1370px)
+			width: 1370px
+	&__slider
+		margin-top: 20px
+		@media(min-width: $md)
+			margin-top: 40px
+	&__slider-wrapper
+
+	&__slide
+
+	&__slider-btns
+		width: 540px
+		position: absolute
+		display: flex
+		justify-content: space-between
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		z-index: 12
+	&__slider-btn
+		width: 26px
+		height: 26px
+		border-radius: 100%
+		background-color: var(--white30)
+		display: flex
+		justify-content: center
+		align-items: center
+		& img
+			width: 4px
+			height: 8px
+			object-fit: contain
+		&.next
+			& img
+				transform: scale(-1,1)
+	&__slider-btn-icon
+
+	& .swiper-container
+		padding-bottom: 50px
+		@media(min-width: $md)
+			padding-bottom: 0
+			overflow: visible
+		@media(min-width: 1370px)
+			overflow: hidden
+	& .swiper-wrapper
+	& .swiper-pagination
+		bottom: 0
+		height: 20px
+		@media(min-width: $md)
+			display: none
+	& .swiper-pagination-bullet
+		width: 20px
+		height: 20px
+		position: relative
+		background-color: var(--white)
+		opacity: 1
+		margin: 0
+		& + .swiper-pagination-bullet
+			margin-left: 10px
+		&:before
+			content: ''
+			width: 12px
+			height: 12px
+			background-color: var(--black10)
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			border-radius: 100%
+	& .swiper-pagination-bullet-active
+		width: 20px
+		height: 20px
+		border: 1px solid var(--blue)
+		&:before
+			background-color: var(--blue)
+	& .swiper-slide-prev,
+	& .swiper-slide-next
+		@media(min-width: $md)
+			display: flex
+			justify-content: center
+			align-items: center
+			padding: 0 20px
+			& .index-places-slide__bg-box
+				height: 240px
+				border-radius: 10px
+				overflow: hidden
+				top: 50%
+				transform: translate(0,-50%)
+			& .index-places-slide__subtitle,
+			& .index-places-slide__info-box
+				display: none
+				font-size: 20px
+				line-height: 30px
+	& .swiper-slide-prev
+	& .swiper-slide-next
+.index-places-slide
+	border-radius: 10px
+	overflow: hidden
+	position: relative
+	padding: 30px 20px 20px
+	@media(min-width: $md)
+		padding: 50px 30px 20px
+		height: auto
+	@media(min-width: 1370px)
+		padding: 100px 30px 20px
+	&__content
+		z-index: 2
+		position: relative
+	&__title
+		font-family: PlayfairDisplay
+		font-style: normal
+		font-weight: 900
+		font-size: 20px
+		line-height: 30px
+		text-align: center
+		letter-spacing: 0.05em
+		color: var(--white)
+		margin-bottom: 15px
+		@media(min-width: $md)
+			font-size: 30px
+			line-height: 45px
+		&_italic-nobr
+			white-space: nowrap
+	&__subtitle
+		font-size: 12px
+		line-height: 16px
+		color: var(--white)
+		text-align: center
+		@media(min-width: $md)
+			font-size: 14px
+			line-height: 19px
+		@media(min-width: 1370px)
+			margin-bottom: 97px
+	&__info-box
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		align-items: center
+		@media(min-width: 1370px)
+			margin-top: auto
+	&__price
+		font-weight: bold
+		font-size: 16px
+		line-height: 22px
+		color: var(--white)
+		text-align: center
+		width: 100%
+		margin-top: 20px
+		@media(min-width: $md)
+			font-size: 18px
+			line-height: 25px
+			margin-top: 25px
+		@media(min-width: $xl)
+			font-size: 14px
+			line-height: 19px
+		@media(min-width: 1370px)
+			width: auto
+			margin-top: 0
+			order: 3
+	&__icon-text
+		font-weight: 600
+		font-size: 14px
+		line-height: 19px
+		color: var(--white)
+		margin-top: 30px
+		background-repeat: no-repeat
+		background-size: 19px 19px
+		background-position: left center
+		padding-left: 29px
+		display: flex
+		align-items: center
+		@media(min-width: $md)
+			margin-top: 50px
+		@media(min-width: 1370px)
+			margin-top: 0
+	&__date
+		background-image: url('../img/calendar-icon-white.svg')
+	&__place
+		background-image: url('../img/geo-icon-white.svg')
+	&__bg-box
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+	&__bg
+		width: 100%
+		height: 100%
+		object-fit: cover
+
+

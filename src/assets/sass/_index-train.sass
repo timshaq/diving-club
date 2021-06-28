@@ -1,0 +1,149 @@
+.index-train
+	background-color: var(--black)
+	background-image: url('../img/index-train-bg__01.png')
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
+	padding-top: 30px
+	padding-bottom: 30px
+	@media(min-width: $md)
+		padding-top: 60px
+		background-image: url('../img/index-train-bg__02.png')
+	@media(min-width: $xl)
+		padding-top: 80px
+		background-image: url('../img/index-train-bg__03.png')
+	& .title-page__title
+		color: var(--white)
+	& .title-page__subtitle
+		color: var(--white60)
+	&__fix-box
+	&__bg-icon-box
+		width: 63px
+		height: 63px
+		position: absolute
+		bottom: 20px
+		right: -5px
+		z-index: 10
+		transform: rotate(20deg)
+		@media(min-width: $md)
+			width: 82px
+			height: 82px
+			right: -11px
+		@media(min-width: $xl)
+			width: 120px
+			height: 120px
+			bottom: -14px
+			right: -12px
+	&__bg-icon
+		width: 100%
+		height: 100%
+		object-fit: contain
+	& .swiper-container
+		padding-bottom: 50px
+		padding-top: 50px
+	& .swiper-wrapper
+	& .swiper-pagination
+		bottom: 0
+		height: 20px
+	& .swiper-pagination-bullet
+		width: 20px
+		height: 20px
+		position: relative
+		background-color: transparent
+		opacity: 1
+		margin: 0
+		& + .swiper-pagination-bullet
+			margin-left: 10px
+		&:before
+			content: ''
+			width: 12px
+			height: 12px
+			background-color: var(--white60)
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			border-radius: 100%
+	& .swiper-pagination-bullet-active
+		width: 20px
+		height: 20px
+		border: 1px solid var(--white)
+		&:before
+			background-color: var(--black)
+	&__tabs
+
+	&__tab
+
+	&__content-box
+
+	&__content
+		position: absolute
+		opacity: 0
+		visibility: hidden
+		width: 290px
+		@media(min-width: $md)
+			width: 708px
+		@media(min-width: $xl)
+			width: 1170px
+		&.active
+			position: relative
+			opacity: 1
+			visibility: visible
+			width: 100%
+	&__list
+
+	&__slide
+
+
+.swiper-container
+
+.active
+
+.swiper-wrapper
+
+.index-train-slide
+	display: flex
+	flex-direction: column
+	padding: 20px 15px
+	backdrop-filter: blur(27px)
+	background: linear-gradient(136.38deg, rgba(225, 225, 225, 0.25) 0%, rgba(225, 225, 225, 0.0875) 100%)
+	border-radius: 10px
+	overflow: hidden
+	&__icon-box
+		width: 170px
+		height: 130px
+		margin-right: auto
+		margin-left: auto
+	&__icon
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__title
+		font-family: PlayfairDisplay
+		font-style: normal
+		font-weight: 900
+		font-size: 20px
+		line-height: 29px
+		text-align: center
+		letter-spacing: 0.05em
+		margin-top: 20px
+		color: var(--white)
+	&__p
+		font-size: 14px
+		line-height: 29px
+		color: var(--white60)
+		margin-top: 10px
+		text-align: center
+		margin-bottom: 15px
+	&__price
+		font-family: PlayfairDisplay
+		font-style: normal
+		font-weight: 900
+		font-size: 16px
+		line-height: 23px
+		text-align: center
+		letter-spacing: 0.05em
+		color: var(--white)
+		margin-top: auto
+.swiper-slide
+

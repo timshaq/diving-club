@@ -6,7 +6,9 @@ $xs: 576px
 \:root
 	--white: rgba(255,255,255,1)
 	--white12: rgba(255,255,255,.12)
+	--white30: rgba(255,255,255,.3)
 	--white60: rgba(255,255,255,.6)
+	--white80: rgba(255,255,255,.8)
 	--black: rgba(0, 36, 70, 1)
 	--black50: rgba(0, 36, 70, .5)
 	--black10: rgba(0, 36, 70, .1)
@@ -106,6 +108,13 @@ main
 			display: none
 			@media(min-width: $md)
 				display: block
+.italic
+	font-style: italic
+	font-family: inherit
+	font-weight: inherit
+	font-size: inherit
+	line-height: inherit
+	color: inherit
 .btns-box
 	width: 100%
 	display: flex
@@ -175,9 +184,19 @@ main
 		&:hover
 			color: var(--blue)
 			border-color: var(--blue)
-.tab-active 
+	&.tab-active 
 		color: var(--blue)
 		border-color: var(--blue)
+.tab-white
+	color: var(--white)
+	border: 1.5px solid var(--white)
+	@media(min-width: $xl)
+		&:hover
+			color: var(--white60)
+			border-color: var(--white60)
+	&.tab-active 
+		color: var(--white60)
+		border-color: var(--white60)
 .text-hidden-mob
 	display: none
 	color: inherit

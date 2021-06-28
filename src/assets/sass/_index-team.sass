@@ -1,0 +1,248 @@
+.index-team
+	&__fix-box
+
+	&__lead
+
+.index-team-lead
+	background-color: #1D2F3E
+	margin-top: 50px
+	margin-bottom: 30px
+	padding-top: 235px
+	padding-bottom: 25px
+	position: relative
+	@media(min-width: $md)
+		margin-top: 100px
+		margin-bottom: 40px
+		padding-top: 30px
+		padding-bottom: 30px
+		position: static
+	@media(min-width: $xl)
+		margin-top: 90px
+		margin-bottom: 50px
+		padding-top: 50px
+		padding-bottom: 50px
+	&__fix-box
+		@media(min-width: $md)
+			position: relative
+	&__content
+		@media(min-width: $md)
+			padding-left: 246px
+		@media(min-width: $xl)
+			padding-left: 300px
+	&__ph-box
+		width: 210px
+		height: 250px
+		position: absolute
+		top: -30px
+		left: 50%
+		transform: translateX(-50%)
+		@media(min-width: $md)
+			width: 216px
+			height: 286px
+			top: -60px
+			left: 0
+			transform: none
+		@media(min-width: $xl)
+			width: 270px
+			height: 360px
+			top: -100px
+	&__ph
+		width: 100%
+		height: 100%
+		object-fit: cover
+	&__title
+		font-family: PlayfairDisplay
+		font-style: normal
+		font-weight: 900
+		font-size: 20px
+		line-height: 27px
+		text-align: center
+		letter-spacing: 0.05em
+		color: var(--white)
+		margin-top: 15px
+		margin-bottom: 15px
+		@media(min-width: $md)
+			margin-top: 0
+			text-align: left
+		@media(min-width: $xl)
+			font-size: 24px
+			line-height: 32px
+			margin-bottom: 20px
+	&__separator-box
+		width: 36px
+		height: 6px
+		margin-top: 15px
+		margin-bottom: 15px
+		margin-right: auto
+		margin-left: auto
+		@media(min-width: $md)
+			margin-bottom: 20px
+			margin-left: 0
+		@media(min-width: $xl)
+			margin-top: 20px
+	&__separator
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__p
+		font-size: 14px
+		line-height: 25px
+		color: var(--white)
+		margin-top: 15px
+		margin-bottom: 20px
+		text-align: center
+		overflow: hidden
+		text-overflow: ellipsis
+		display: -webkit-box
+		-webkit-box-orient: vertical
+		-webkit-line-clamp: 8
+		max-height: 200px
+		@media(min-width: $md)
+			margin-top: 20px
+			margin-bottom: 17px
+			text-align: left
+			-webkit-line-clamp: 5
+			max-height: 125px
+		@media(min-width: $xl)
+			margin-bottom: 0
+			overflow: auto
+			text-overflow: initial
+			display: block
+			-webkit-line-clamp: initial
+			max-height: none
+		&.open
+			overflow: auto
+			text-overflow: initial
+			display: block
+			-webkit-line-clamp: initial
+			max-height: none
+	&__toggler
+		font-family: PlayfairDisplay
+		font-style: normal
+		font-weight: 900
+		font-size: 16px
+		line-height: 21px
+		letter-spacing: 0.05em
+		color: var(--white)
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		@media(min-width: $md)
+			justify-content: flex-start
+		@media(min-width: $xl)
+			display: none
+
+.index-team-list
+	padding-top: 30px
+	@media(min-width: $md)
+		padding-top: 40px
+	@media(min-width: $xl)
+		padding-top: 50px
+	&__title
+		font-family: PlayfairDisplay
+		font-style: normal
+		font-weight: 900
+		font-size: 20px
+		line-height: 27px
+		text-align: center
+		letter-spacing: 0.05em
+		margin-bottom: 20px
+		@media(min-width: $md)
+			font-size: 24px
+			line-height: 32px
+			margin-bottom: 30px
+		@media(min-width: $xl)
+			font-size: 28px
+			line-height: 37px
+			margin-bottom: 40px
+	&__slider
+		padding-top: 25px
+		margin-top: 20px
+		@media(min-width: $xl)
+			overflow: visible
+	&__slider-wrapper
+	&__item
+
+	& .swiper-container
+		padding-bottom: 50px
+	& .swiper-wrapper
+	& .swiper-pagination
+		bottom: 0
+		height: 20px
+		@media(min-width: $xl)
+			display: none
+	& .swiper-pagination-bullet
+		width: 20px
+		height: 20px
+		position: relative
+		background-color: var(--white)
+		opacity: 1
+		margin: 0
+		& + .swiper-pagination-bullet
+			margin-left: 10px
+		&:before
+			content: ''
+			width: 12px
+			height: 12px
+			background-color: var(--black10)
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			border-radius: 100%
+	& .swiper-pagination-bullet-active
+		width: 20px
+		height: 20px
+		border: 1px solid var(--blue)
+		&:before
+			background-color: var(--blue)
+
+.index-team-list-item
+	height: auto
+	border-radius: 10px
+	box-shadow: 0px 6px 16px rgba(46, 60, 80, 0.07)
+	display: flex
+	flex-direction: column
+	padding-bottom: 20px
+	padding-left: 10px
+	padding-right: 10px
+	@media(min-width: $xl)
+		padding-left: 25px
+		padding-right: 25px
+	&__ph-box
+		width: 166px
+		height: 194px
+		border-radius: 10px
+		overflow: hidden
+		position: relative
+		left: 50%
+		transform: translate(-50%,-25px)
+		margin-bottom: -5px
+		@media(min-width: $xl)
+			width: 220px
+			height: 270px
+	&__ph
+		width: 100%
+		height: 100%
+		object-fit: cover
+	&__title
+		font-family: PlayfairDisplay
+		font-style: normal
+		font-weight: 900
+		font-size: 16px
+		line-height: 21px
+		text-align: center
+		letter-spacing: 0.05em
+		margin-bottom: 10px
+	&__subtitle
+		font-size: 14px
+		line-height: 22px
+		color: var(--black50)
+		text-align: center
+		margin-top: auto
+		width: 175px
+		margin-right: auto
+		margin-left: auto
+.swiper-slide
+
