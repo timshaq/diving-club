@@ -1,14 +1,21 @@
 .index-hero
 	margin-top: -113px
 	background-color: var(--black)
+	background-repeat: no-repeat
+	background-position: center center
+	background-size: cover
 	padding-top: 193px
 	padding-bottom: 30px
 	min-height: 480px
 	height: 100vh
+	background-image: url('../img/hero-bg__768h.png')
+	overflow: hidden
 	@media(min-width:$md)
 		margin-top: -118px
 	@media(min-width:$xl)
 		padding-top: 140px
+	@media(min-width: $xl) and (min-height: 768px)
+		background-image: url('../img/hero-bg__1080h.png')
 	&__fix-box
 		position: relative
 	&__title
@@ -52,6 +59,11 @@
 		@media(min-width:$xl)
 			width: 230px
 			margin-top: 60px
+	&__subtitle,
+	&__btn,
+	&__whatsapp
+		position: relative
+		z-index: 6
 	&__whatsapp
 		display: block
 		position: absolute
@@ -69,9 +81,66 @@
 		height: 100%
 		object-fit: contain
 
-.fix-box
+.index-hero
+	&__bg-box
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+	&__diver-box
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%,-50%)
+		z-index: 5
+		width: 290px
+		height: 240px
+		@media(min-width: $md)
+			width: 370px
+			height: 260px
+		@media(min-width: $xl)
+			width: 560px
+			height: 390px
+	&__diver-768
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__fish-left-box
+		display: none
+		@media(min-width: $md)
+			display: block
+			position: absolute
+			bottom: 0
+			left: -50%
+			width: 490px
+			height: 480px
+		@media(min-width: $xl)
+			left: 0
+			width: 490px
+			height: 480px
+	&__fish-left-768
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__fish-right-box
+		display: none
+		@media(min-width: $md)
+			display: block
+			position: absolute
+			bottom: 0
+			right: -30%
+			width: 440px
+			height: 200px
+		@media(min-width: $xl)
+			right: 0
+			width: 440px
+			height: 200px
+	&__fish-right-768
+		width: 100%
+		height: 100%
+		object-fit: contain
 
-.btn
 
-.btn-white
+
 

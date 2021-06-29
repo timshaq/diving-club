@@ -7,6 +7,7 @@ import adaptiveSliders from './adaptiveSliders.js';
 import serviceTabs from './serviceTabs.js';
 import indexTabs from './indexTabs.js';
 import headerFix from './headerFix.js';
+import indexHero from './indexHero.js';
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -17,5 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	serviceTabs();
 	indexTabs();
 	headerFix();
+	indexHero();
 
 });
