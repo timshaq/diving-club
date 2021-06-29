@@ -1012,7 +1012,7 @@ label textarea {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 50;
   background-color: rgba(0, 0, 0, 0.65);
   display: none;
@@ -1563,10 +1563,11 @@ label textarea {
 .index-hero {
   margin-top: -113px;
   background-color: var(--black);
-  padding-top: 193px;
+  padding-top: 110px;
   padding-bottom: 30px;
-  min-height: 480px;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: 540px;
   overflow: hidden;
 }
 
@@ -1579,12 +1580,6 @@ label textarea {
 @media (min-width: 1200px) {
   .index-hero {
     padding-top: 140px;
-  }
-}
-
-@media (min-width: 1200px) and (min-height: 768px) {
-  .index-hero {
-    background-image: url("../img/hero-bg__1080h.png");
   }
 }
 
@@ -1632,8 +1627,8 @@ label textarea {
   margin-bottom: 15px;
   color: var(--white);
   text-transform: uppercase;
-  font-size: 32px;
-  line-height: 40px;
+  font-size: 42px;
+  line-height: 56px;
 }
 
 @media (min-width: 768px) {
@@ -1733,6 +1728,7 @@ label textarea {
   position: absolute;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 
 .index-hero__diver-box, .index-hero__fish-left-box, .index-hero__fish-right-box {
@@ -1741,8 +1737,8 @@ label textarea {
 
 .index-hero__diver-box {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 54%;
+  left: 56%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -1753,6 +1749,8 @@ label textarea {
 
 @media (min-width: 768px) {
   .index-hero__diver-box {
+    top: 50%;
+    left: 50%;
     width: 370px;
     height: 260px;
   }
@@ -5714,7 +5712,6 @@ label textarea {
 }
 
 .popup-box .popup-review {
-  height: 100%;
   background-color: var(--gray-light);
   position: relative;
 }

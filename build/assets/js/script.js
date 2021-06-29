@@ -1,412 +1,490 @@
-/******/
-(function (modules) {
-  // webpackBootstrap
+!function (e) {
+  var t = {};
 
-  /******/
-  // The module cache
-
-  /******/
-  var installedModules = {};
-  /******/
-
-  /******/
-  // The require function
-
-  /******/
-
-  function __webpack_require__(moduleId) {
-    /******/
-
-    /******/
-    // Check if module is in cache
-
-    /******/
-    if (installedModules[moduleId]) {
-      /******/
-      return installedModules[moduleId].exports;
-      /******/
-    }
-    /******/
-    // Create a new module (and put it into the cache)
-
-    /******/
-
-
-    var module = installedModules[moduleId] = {
-      /******/
-      i: moduleId,
-
-      /******/
-      l: false,
-
-      /******/
+  function n(i) {
+    if (t[i]) return t[i].exports;
+    var s = t[i] = {
+      i: i,
+      l: !1,
       exports: {}
-      /******/
-
     };
-    /******/
-
-    /******/
-    // Execute the module function
-
-    /******/
-
-    modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-    /******/
-
-    /******/
-    // Flag the module as loaded
-
-    /******/
-
-    module.l = true;
-    /******/
-
-    /******/
-    // Return the exports of the module
-
-    /******/
-
-    return module.exports;
-    /******/
+    return e[i].call(s.exports, s, s.exports, n), s.l = !0, s.exports;
   }
-  /******/
 
-  /******/
-
-  /******/
-  // expose the modules object (__webpack_modules__)
-
-  /******/
-
-
-  __webpack_require__.m = modules;
-  /******/
-
-  /******/
-  // expose the module cache
-
-  /******/
-
-  __webpack_require__.c = installedModules;
-  /******/
-
-  /******/
-  // define getter function for harmony exports
-
-  /******/
-
-  __webpack_require__.d = function (exports, name, getter) {
-    /******/
-    if (!__webpack_require__.o(exports, name)) {
-      /******/
-      Object.defineProperty(exports, name, {
-        enumerable: true,
-        get: getter
-      });
-      /******/
-    }
-    /******/
-
-  };
-  /******/
-
-  /******/
-  // define __esModule on exports
-
-  /******/
-
-
-  __webpack_require__.r = function (exports) {
-    /******/
-    if (typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-      /******/
-      Object.defineProperty(exports, Symbol.toStringTag, {
-        value: 'Module'
-      });
-      /******/
-    }
-    /******/
-
-
-    Object.defineProperty(exports, '__esModule', {
-      value: true
+  n.m = e, n.c = t, n.d = function (e, t, i) {
+    n.o(e, t) || Object.defineProperty(e, t, {
+      enumerable: !0,
+      get: i
     });
-    /******/
-  };
-  /******/
-
-  /******/
-  // create a fake namespace object
-
-  /******/
-  // mode & 1: value is a module id, require it
-
-  /******/
-  // mode & 2: merge all properties of value into the ns
-
-  /******/
-  // mode & 4: return value when already ns object
-
-  /******/
-  // mode & 8|1: behave like require
-
-  /******/
-
-
-  __webpack_require__.t = function (value, mode) {
-    /******/
-    if (mode & 1) value = __webpack_require__(value);
-    /******/
-
-    if (mode & 8) return value;
-    /******/
-
-    if (mode & 4 && typeof value === 'object' && value && value.__esModule) return value;
-    /******/
-
-    var ns = Object.create(null);
-    /******/
-
-    __webpack_require__.r(ns);
-    /******/
-
-
-    Object.defineProperty(ns, 'default', {
-      enumerable: true,
-      value: value
+  }, n.r = function (e) {
+    "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
+      value: "Module"
+    }), Object.defineProperty(e, "__esModule", {
+      value: !0
     });
-    /******/
-
-    if (mode & 2 && typeof value != 'string') for (var key in value) __webpack_require__.d(ns, key, function (key) {
-      return value[key];
-    }.bind(null, key));
-    /******/
-
-    return ns;
-    /******/
-  };
-  /******/
-
-  /******/
-  // getDefaultExport function for compatibility with non-harmony modules
-
-  /******/
-
-
-  __webpack_require__.n = function (module) {
-    /******/
-    var getter = module && module.__esModule ?
-    /******/
-    function getDefault() {
-      return module['default'];
-    } :
-    /******/
-    function getModuleExports() {
-      return module;
+  }, n.t = function (e, t) {
+    if (1 & t && (e = n(e)), 8 & t) return e;
+    if (4 & t && "object" == typeof e && e && e.__esModule) return e;
+    var i = Object.create(null);
+    if (n.r(i), Object.defineProperty(i, "default", {
+      enumerable: !0,
+      value: e
+    }), 2 & t && "string" != typeof e) for (var s in e) n.d(i, s, function (t) {
+      return e[t];
+    }.bind(null, s));
+    return i;
+  }, n.n = function (e) {
+    var t = e && e.__esModule ? function () {
+      return e.default;
+    } : function () {
+      return e;
     };
-    /******/
+    return n.d(t, "a", t), t;
+  }, n.o = function (e, t) {
+    return Object.prototype.hasOwnProperty.call(e, t);
+  }, n.p = "", n(n.s = 8);
+}([function (e, t, n) {
+  "use strict";
 
-    __webpack_require__.d(getter, 'a', getter);
-    /******/
+  n.r(t), t.default = function () {
+    function e(e, t, n) {
+      const i = e;
+      if (!i) return;
+      const s = window.matchMedia(`(min-width:${t}px)`);
+      let c;
 
+      const o = function () {
+        !0 !== s.matches ? !1 !== s.matches || (c = new Swiper(i, n)) : void 0 !== c && c.destroy(!0, !0);
+      };
 
-    return getter;
-    /******/
+      s.addListener(o), o();
+    }
+
+    const t = document.querySelectorAll(".services-places .services-places__content-box .swiper-container"),
+          n = Array.prototype.slice.call(t);
+    n.length > 0 && n.forEach(t => {
+      e(t, 768, {
+        slidesPerView: 1.23,
+        spaceBetween: 10
+      });
+    });
+    const i = document.querySelectorAll(".index-price .index-price__content-box .swiper-container"),
+          s = Array.prototype.slice.call(i);
+    s.length > 0 && s.forEach(t => {
+      e(t, 768, {
+        slidesPerView: 1.23,
+        spaceBetween: 10
+      });
+    });
+    const c = document.getElementById("articleAsideSlider");
+    c && e(c, 1200, {
+      breakpoints: {
+        0: {
+          slidesPerView: 1.23,
+          spaceBetween: 10
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        }
+      }
+    });
+    const o = document.getElementById("aboutCertificatesMobSlider");
+    o && e(o, 768, {
+      pagination: {
+        el: "#aboutCertificatesMobSliderPagination",
+        type: "bullets"
+      },
+      slidesPerView: 1,
+      spaceBetween: 10
+    });
   };
-  /******/
+}, function (e, t, n) {
+  "use strict";
 
-  /******/
-  // Object.prototype.hasOwnProperty.call
+  n.r(t), t.default = function () {
+    const e = document.getElementById("header");
 
-  /******/
+    function t() {
+      const t = document.documentElement.scrollTop;
+      t > 98 && e.classList.add("active"), t < 98 && e.classList.remove("active");
+    }
 
-
-  __webpack_require__.o = function (object, property) {
-    return Object.prototype.hasOwnProperty.call(object, property);
+    document.addEventListener("scroll", function () {
+      t();
+    }), t();
   };
-  /******/
+}, function (e, t, n) {
+  "use strict";
 
-  /******/
-  // __webpack_public_path__
+  n.r(t), t.default = function () {
+    const e = document.getElementById("indexHeroParallax");
 
-  /******/
+    if (e) {
+      const t = document.getElementById("indexHeroDiver"),
+            n = document.getElementById("indexHeroFishLeft"),
+            i = document.getElementById("indexHeroFishRight"),
+            s = 10,
+            c = 25,
+            o = 15,
+            r = .05;
+      let a = 0,
+          l = 0,
+          d = 0,
+          u = 0;
+      !function e() {
+        a += (d - a) * r, l += (u - l) * r, t.style.cssText = `transform: translate(${a / s - 50}%,${l / s - 50}%)`, n.style.cssText = `transform: translate(${-a / c}%,${-l / c}%)`, i.style.cssText = `transform: translate(${-a / o}%,${-l / o}%)`, requestAnimationFrame(e);
+      }(), e.addEventListener("mousemove", function (t) {
+        const n = e.offsetWidth,
+              i = e.offsetHeight,
+              s = t.pageX - n / 2,
+              c = t.pageY - i / 2;
+        d = s / n * 100, u = c / i * 100;
+      });
+    }
+  };
+}, function (e, t, n) {
+  "use strict";
 
+  n.r(t), t.default = function () {
+    const e = document.getElementById("indexPrice");
 
-  __webpack_require__.p = "";
-  /******/
+    if (e) {
+      const t = e.querySelectorAll(".tabs-box .tab"),
+            n = Array.prototype.slice.call(t),
+            i = e.querySelectorAll(".services-places__content"),
+            s = Array.prototype.slice.call(i);
+      n.forEach((e, t) => {
+        e.addEventListener("click", function () {
+          n.forEach(e => e.classList.remove("tab-active")), e.classList.add("tab-active"), s.forEach(e => e.classList.remove("active")), s[t].classList.add("active");
+        });
+      });
+    }
 
-  /******/
+    const t = document.getElementById("indexTeamLeadToggler");
 
-  /******/
-  // Load entry module and return exports
+    if (t) {
+      const e = document.getElementById("indexTeamLeadText");
+      t.addEventListener("click", function () {
+        e.classList.contains("open") ? (e.classList.remove("open"), t.textContent = "Подробнее") : (e.classList.add("open"), t.textContent = "Скрыть");
+      });
+    }
 
-  /******/
+    const n = document.getElementById("indexTeamListSlider");
 
-  return __webpack_require__(__webpack_require__.s = 0);
-  /******/
-})(
-/************************************************************************/
+    if (n) {
+      new Swiper(n, {
+        watchOverflow: !0,
+        pagination: {
+          el: "#indexTeamListSliderPagination",
+          type: "bullets"
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1.23,
+            spaceBetween: 10
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 30
+          }
+        }
+      });
+    }
 
-/******/
-{
-  /***/
-  "./src/assets/js/adaptiveSliders.js":
-  /*!******************************************!*\
-    !*** ./src/assets/js/adaptiveSliders.js ***!
-    \******************************************/
+    const i = document.getElementById("indexPlacesSlider");
 
-  /*! exports provided: default */
+    if (i) {
+      new Swiper(i, {
+        watchOverflow: !0,
+        pagination: {
+          el: "#indexPlacesSliderPagination",
+          type: "bullets"
+        },
+        navigation: {
+          prevEl: "#indexPlacesSliderPrevBtn",
+          nextEl: "#indexPlacesSliderNextBtn"
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          768: {
+            centeredSlides: !0,
+            loop: !0,
+            slidesPerView: 1.53,
+            spaceBetween: 30
+          },
+          1370: {
+            centeredSlides: !0,
+            loop: !0,
+            slidesPerView: 2.3,
+            spaceBetween: 30
+          }
+        }
+      });
+    }
 
-  /***/
-  function (module, __webpack_exports__, __webpack_require__) {
-    "use strict";
+    const s = document.getElementById("indexTrain");
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tfunction setAdaptiveSlider(el, match, config) {\r\n\r\n\t\tconst sliderEl = el;\r\n\t\tif(!sliderEl) return\r\n\r\n\t\tconst breakpointMob = window.matchMedia(`(min-width:${match}px)`)\r\n\r\n\t\tlet slider;\r\n\r\n\t\tconst enableSlider = function() {\r\n\t\t\tslider = new Swiper(sliderEl, config)\r\n\t\t}\r\n\r\n\t\tconst breakpointChecker = function() {\r\n\t\t\tif(breakpointMob.matches === true) {\r\n\t\t\t\tif(slider !== undefined) slider.destroy(true,true);\r\n\t\t\t\treturn;\r\n\t\t\t} else if (breakpointMob.matches === false) {\r\n\t\t\t\treturn enableSlider();\r\n\t\t\t}\r\n\t\t}\r\n\t\tbreakpointMob.addListener(breakpointChecker);\r\n\t\tbreakpointChecker();\r\n\t}\r\n\r\n\tconst servicesPlacesSlidersElementsNL = document.querySelectorAll('.services-places .services-places__content-box .swiper-container')\r\n\tconst servicesPlacesSlidersElements = Array.prototype.slice.call(servicesPlacesSlidersElementsNL)\r\n\r\n\tif(servicesPlacesSlidersElements.length > 0) {\r\n\t\tservicesPlacesSlidersElements.forEach(el => {\r\n\t\t\tsetAdaptiveSlider(el, 768, {\r\n\t\t\t\t\tslidesPerView: 1.23,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t})\r\n\t\t})\r\n\t}\r\n\r\n\tconst indexPriceSlidersElementsNL = document.querySelectorAll('.index-price .index-price__content-box .swiper-container')\r\n\tconst indexPriceSlidersElements = Array.prototype.slice.call(indexPriceSlidersElementsNL)\r\n\r\n\tif(indexPriceSlidersElements.length > 0) {\r\n\t\tindexPriceSlidersElements.forEach(el => {\r\n\t\t\tsetAdaptiveSlider(el, 768, {\r\n\t\t\t\t\tslidesPerView: 1.23,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t})\r\n\t\t})\r\n\t}\r\n\r\n\r\n\tconst articleAsideSlider = document.getElementById('articleAsideSlider');\r\n\tif(articleAsideSlider) {\r\n\t\tsetAdaptiveSlider(articleAsideSlider, 1200, {\r\n\t\t\tbreakpoints: {\r\n\t\t\t\t0: {\r\n\t\t\t\t\tslidesPerView: 1.23,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t},\r\n\t\t\t\t768: {\r\n\t\t\t\t\tslidesPerView: 2,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t},\r\n\t\t\t}\r\n\t\t\t})\r\n\t}\r\n\r\n\tconst aboutCertificatesMobSlider = document.getElementById('aboutCertificatesMobSlider')\r\n\r\n\tif(aboutCertificatesMobSlider) {\r\n\t\tsetAdaptiveSlider(aboutCertificatesMobSlider, 768, {\r\n\t\t\tpagination: {\r\n\t\t\t\tel: '#aboutCertificatesMobSliderPagination',\r\n\t\t\t\ttype: 'bullets',\r\n\t\t\t},\r\n\t\t\t\tslidesPerView: 1,\r\n\t\t\t\tspaceBetween: 10,\r\n\t\t\t})\r\n\t}\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/adaptiveSliders.js?");
-    /***/
-  },
+    if (s) {
+      const e = s.querySelectorAll(".tabs-box .tab"),
+            t = Array.prototype.slice.call(e),
+            n = s.querySelectorAll(".index-train__content"),
+            i = Array.prototype.slice.call(n);
+      t.forEach((e, n) => {
+        e.addEventListener("click", function () {
+          t.forEach(e => e.classList.remove("tab-active")), e.classList.add("tab-active"), i.forEach(e => e.classList.remove("active")), i[n].classList.add("active");
+        });
+      });
+    }
 
-  /***/
-  "./src/assets/js/headerFix.js":
-  /*!************************************!*\
-    !*** ./src/assets/js/headerFix.js ***!
-    \************************************/
+    const c = document.querySelectorAll(".index-train .index-train__content-box .swiper-container"),
+          o = Array.prototype.slice.call(c);
+    o.length > 0 && o.forEach(e => {
+      const t = e.querySelector(".swiper-pagination");
+      new Swiper(e, {
+        watchOverflow: !0,
+        pagination: {
+          el: t,
+          type: "bullets"
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 30
+          }
+        }
+      });
+    });
+    const r = document.getElementById("indexPopupSlider");
 
-  /*! exports provided: default */
+    if (r) {
+      new Swiper(r, {
+        watchOverflow: !0,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+          el: "#indexPopupSliderPagination",
+          type: "bullets"
+        },
+        navigation: {
+          prevEl: "#indexPopupSliderPaginationPrev",
+          nextEl: "#indexPopupSliderPaginationNext"
+        }
+      });
+    }
+  };
+}, function (e, t, n) {
+  "use strict";
 
-  /***/
-  function (module, __webpack_exports__, __webpack_require__) {
-    "use strict";
+  n.r(t), t.default = function () {
+    const e = document.getElementById("menu"),
+          t = document.getElementById("burgerBtn"),
+          n = document.getElementById("menuCloseBtn");
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst header = document.getElementById('header');\r\n\r\n\tfunction setHeaderActiveClass() {\r\n\t\tconst scrollTop = document.documentElement.scrollTop;\r\n\t\tif (scrollTop > 98) header.classList.add('active')\r\n\t\tif (scrollTop < 98) header.classList.remove('active')\r\n\t}\r\n\r\n\tdocument.addEventListener('scroll', function() {\r\n\t\tsetHeaderActiveClass()\r\n\t})\r\n\r\n\tsetHeaderActiveClass()\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/headerFix.js?");
-    /***/
-  },
+    function i(e) {
+      e.classList.remove("open"), html.style.overflowX = "hidden", html.style.overflowY = "scroll";
+    }
 
-  /***/
-  "./src/assets/js/indexHero.js":
-  /*!************************************!*\
-    !*** ./src/assets/js/indexHero.js ***!
-    \************************************/
+    function s(e) {
+      e.classList.add("open"), html.style.overflowX = "hidden", html.style.overflowY = "hidden";
+    }
 
-  /*! exports provided: default */
+    t.addEventListener("click", function () {
+      s(e);
+    }), n.addEventListener("click", function () {
+      i(e);
+    }), e.addEventListener("click", function (t) {
+      const n = document.documentElement.offsetWidth;
+      t.target === this && n > 767 && (i(e), console.log("true"));
+    });
+  };
+}, function (e, t, n) {
+  "use strict";
 
-  /***/
-  function (module, __webpack_exports__, __webpack_require__) {
-    "use strict";
+  n.r(t), t.default = function () {
+    new Swiper("#indexHeroSlider", {
+      navigation: {
+        nextEl: "#indexHeroSliderNextBtn",
+        prevEl: "#indexHeroSliderPrevBtn"
+      },
+      pagination: {
+        el: "#indexHeroSliderPagination",
+        type: "fraction"
+      },
+      slidesPerView: 1,
+      spaceBetween: 10
+    }), new Swiper("#servicesTripSlider", {
+      pagination: {
+        el: "#servicesTripSliderPagination",
+        type: "bullets"
+      },
+      watchOverflow: !0,
+      breakpoints: {
+        0: {
+          slidesPerView: 1.23,
+          spaceBetween: 10
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
+      }
+    }), new Swiper("#indexBlogSlider", {
+      watchOverflow: !0,
+      breakpoints: {
+        0: {
+          slidesPerView: 1.23,
+          spaceBetween: 10
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        },
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
+      }
+    }), new Swiper("#indexReviewsSlider", {
+      pagination: {
+        el: "#indexReviewsSliderPagination",
+        type: "bullets"
+      },
+      watchOverflow: !0,
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          spaceBetween: 10
+        },
+        768: {
+          slidesPerView: 1,
+          spaceBetween: 30
+        },
+        1200: {
+          slidesPerView: 2,
+          spaceBetween: 30
+        }
+      }
+    });
+    const e = document.querySelectorAll(".services-train .services-train__content-box .services-train__offers-list .swiper-container");
+    Array.prototype.slice.call(e).forEach(e => {
+      console.log(e);
+      new Swiper(e, {
+        mousewheel: !0,
+        speed: 1e3,
+        autoplay: {
+          delay: 3e3
+        },
+        disableOnInteraction: !1,
+        waitForTransition: !0,
+        breakpoints: {
+          0: {
+            slidesPerView: 1.145,
+            spaceBetween: 10
+          },
+          768: {
+            slidesPerView: 2.326,
+            spaceBetween: 20
+          },
+          1200: {
+            direction: "vertical",
+            slidesPerGroup: 5,
+            slidesPerView: 5,
+            spaceBetween: 20
+          }
+        }
+      });
+    });
+  };
+}, function (e, t, n) {
+  "use strict";
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\nconst parallax = document.getElementById('indexHeroParallax');\r\nif(parallax) {\r\n\r\n\tconst diver = document.getElementById('indexHeroDiver');\r\n\tconst fishLeft = document.getElementById('indexHeroFishLeft');\r\n\tconst fishRight = document.getElementById('indexHeroFishRight');\r\n\r\n\tconst kDiver = 10;\r\n\tconst kFishLeft = 25;\r\n\tconst kFishRight = 15;\r\n\r\n\tconst speed = 0.05;\r\n\r\n\tlet positionX = 0, positionY = 0;\r\n\tlet coordXpercent = 0, coordYpercent = 0;\r\n\r\n\tfunction setMouseParallaxStyle() {\r\n\t\tconst distX = coordXpercent - positionX;\r\n\t\tconst distY = coordYpercent - positionY;\r\n\r\n\t\tpositionX = positionX + (distX * speed);\r\n\t\tpositionY = positionY + (distY * speed);\r\n\r\n\t\tdiver.style.cssText = `transform: translate(${-50 + (positionX / kDiver)}%,${-50 + (positionY / kDiver)}%)`;\r\n\t\tfishLeft.style.cssText = `transform: translate(${-positionX / kFishLeft}%,${-positionY / kFishLeft}%)`;\r\n\t\tfishRight.style.cssText = `transform: translate(${-positionX / kFishRight}%,${-positionY / kFishRight}%)`;\r\n\r\n\t\trequestAnimationFrame(setMouseParallaxStyle);\r\n\t}\r\n\r\n\tsetMouseParallaxStyle();\r\n\r\n\tparallax.addEventListener('mousemove', function(ev) {\r\n\t\tconst parallaxWidth = parallax.offsetWidth;\r\n\t\tconst parallaxHeight = parallax.offsetHeight;\r\n\r\n\t\tconst coordX = ev.pageX - parallaxWidth / 2;\r\n\t\tconst coordY = ev.pageY - parallaxHeight / 2;\r\n\r\n\t\tcoordXpercent = coordX / parallaxWidth * 100;\r\n\t\tcoordYpercent = coordY / parallaxHeight * 100;\r\n\t})\r\n\r\n}\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/indexHero.js?");
-    /***/
-  },
+  n.r(t), t.default = function () {
+    const e = [44.561012, 38.077115];
+    if (!document.getElementById("contactsMap")) return;
+    ymaps.ready(function () {
+      var t = new ymaps.Map("contactsMap", {
+        center: e,
+        zoom: 17
+      }),
+          n = new ymaps.Placemark(e, {}, {
+        iconLayout: "default#image",
+        iconImageHref: "assets/img/yamap-tag.png",
+        iconImageSize: [28, 36],
+        iconImageOffset: [-36, -36]
+      });
+      t.geoObjects.add(n);
+    });
+    document.getElementById("contactsMapList"), document.getElementById("contactsMapBox");
+  };
+}, function (e, t, n) {
+  "use strict";
 
-  /***/
-  "./src/assets/js/indexTabs.js":
-  /*!************************************!*\
-    !*** ./src/assets/js/indexTabs.js ***!
-    \************************************/
+  n.r(t), t.default = function () {
+    const e = document.getElementById("servicesPlaces");
 
-  /*! exports provided: default */
+    if (e) {
+      const t = e.querySelectorAll(".tabs-box .tab"),
+            n = Array.prototype.slice.call(t),
+            i = e.querySelectorAll(".services-places__content"),
+            s = Array.prototype.slice.call(i);
+      n.forEach((e, t) => {
+        e.addEventListener("click", function () {
+          n.forEach(e => e.classList.remove("tab-active")), e.classList.add("tab-active"), s.forEach(e => e.classList.remove("active")), s[t].classList.add("active");
+        });
+      });
+    }
 
-  /***/
-  function (module, __webpack_exports__, __webpack_require__) {
-    "use strict";
+    const t = document.getElementById("servicesTrain");
 
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst indexPrice = document.getElementById('indexPrice');\r\n\tif(indexPrice) {\r\n\t\tconst servicesPlacesTabsNL = indexPrice.querySelectorAll('.tabs-box .tab');\r\n\t\tconst servicesPlacesTabs = Array.prototype.slice.call(servicesPlacesTabsNL);\r\n\t\t\r\n\t\tconst servicesPlacesContentsNL = indexPrice.querySelectorAll('.services-places__content');\r\n\t\tconst servicesPlacesContents = Array.prototype.slice.call(servicesPlacesContentsNL);\r\n\r\n\t\tservicesPlacesTabs.forEach((tab, index) => {\r\n\t\t\ttab.addEventListener('click', function() {\r\n\t\t\t\tservicesPlacesTabs.forEach(el => el.classList.remove('tab-active'))\r\n\t\t\t\ttab.classList.add('tab-active')\r\n\r\n\t\t\t\tservicesPlacesContents.forEach(el => el.classList.remove('active'))\r\n\t\t\t\tservicesPlacesContents[index].classList.add('active')\r\n\t\t\t})\r\n\t\t})\r\n\t}\r\n\r\n\tconst indexTeamLeadToggler = document.getElementById('indexTeamLeadToggler');\r\n\tif(indexTeamLeadToggler) {\r\n\t\tconst indexTeamLeadText = document.getElementById('indexTeamLeadText')\r\n\t\tindexTeamLeadToggler.addEventListener('click', function() {\r\n\t\t\tif( indexTeamLeadText.classList.contains('open') ) {\r\n\t\t\t\tindexTeamLeadText.classList.remove('open')\r\n\t\t\t\tindexTeamLeadToggler.textContent = \"Подробнее\"\r\n\t\t\t} else {\r\n\t\t\t\tindexTeamLeadText.classList.add('open')\r\n\t\t\t\tindexTeamLeadToggler.textContent = \"Скрыть\"\r\n\t\t\t}\r\n\t\t})\r\n\t}\r\n\r\n\r\n\tconst indexTeamListSliderEl = document.getElementById('indexTeamListSlider');\r\n\tif(indexTeamListSliderEl) {\r\n\t\tconst indexTeamListSlider = new Swiper(indexTeamListSliderEl, {\r\n\t\t\twatchOverflow: true,\r\n\t\t\tpagination: {\r\n\t\t\t\tel: '#indexTeamListSliderPagination',\r\n\t\t\t\ttype: 'bullets',\r\n\t\t\t},\r\n\t\t\tbreakpoints: {\r\n\t\t\t\t0: {\r\n\t\t\t\t\tslidesPerView: 1.23,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t},\r\n\t\t\t\t768: {\r\n\t\t\t\t\tslidesPerView: 3,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t},\r\n\t\t\t\t1200: {\r\n\t\t\t\t\tslidesPerView: 4,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t},\r\n\t\t\t}\r\n\t\t})\r\n\t}\r\n\r\n\r\n\tconst indexPlacesSlider = document.getElementById('indexPlacesSlider');\r\n\tif(indexPlacesSlider) {\r\n\t\tconst indexTeamListSlider = new Swiper(indexPlacesSlider, {\r\n\t\t\twatchOverflow: true,\r\n\t\t\tpagination: {\r\n\t\t\t\tel: '#indexPlacesSliderPagination',\r\n\t\t\t\ttype: 'bullets',\r\n\t\t\t},\r\n\t\t\tnavigation: {\r\n\t\t\t\tprevEl: '#indexPlacesSliderPrevBtn',\r\n\t\t\t\tnextEl: '#indexPlacesSliderNextBtn',\r\n\t\t\t},\r\n\t\t\tbreakpoints: {\r\n\t\t\t\t0: {\r\n\t\t\t\t\tslidesPerView: 1,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t},\r\n\t\t\t\t768: {\r\n\t\t\t\t\tcenteredSlides: true,\r\n\t\t\t\t\tloop: true,\r\n\t\t\t\t\tslidesPerView: 1.53,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t},\r\n\t\t\t\t1370: {\r\n\t\t\t\t\tcenteredSlides: true,\r\n\t\t\t\t\tloop: true,\r\n\t\t\t\t\tslidesPerView: 2.3,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t},\r\n\t\t\t}\r\n\t\t})\r\n\t}\r\n\r\n\tconst indexTrain = document.getElementById('indexTrain');\r\n\tif(indexTrain) {\r\n\t\tconst indexTrainTabsNL = indexTrain.querySelectorAll('.tabs-box .tab');\r\n\t\tconst indexTrainTabs = Array.prototype.slice.call(indexTrainTabsNL);\r\n\t\t\r\n\t\tconst indexTrainContentsNL = indexTrain.querySelectorAll('.index-train__content');\r\n\t\tconst indexTrainContents = Array.prototype.slice.call(indexTrainContentsNL);\r\n\r\n\t\tindexTrainTabs.forEach((tab, index) => {\r\n\t\t\ttab.addEventListener('click', function() {\r\n\t\t\t\tindexTrainTabs.forEach(el => el.classList.remove('tab-active'))\r\n\t\t\t\ttab.classList.add('tab-active')\r\n\r\n\t\t\t\tindexTrainContents.forEach(el => el.classList.remove('active'))\r\n\t\t\t\tindexTrainContents[index].classList.add('active')\r\n\t\t\t})\r\n\t\t})\r\n\t}\r\n\r\n\tconst indexTrainSlidersElementsNL = document.querySelectorAll('.index-train .index-train__content-box .swiper-container')\r\n\tconst indexTrainSlidersElements = Array.prototype.slice.call(indexTrainSlidersElementsNL)\r\n\r\n\tif(indexTrainSlidersElements.length > 0) {\r\n\t\tindexTrainSlidersElements.forEach(el => {\r\n\t\t\tconst pagination = el.querySelector('.swiper-pagination')\r\n\t\t\tconst slider = new Swiper(el, {\r\n\t\t\t\twatchOverflow: true,\r\n\t\t\t\tpagination: {\r\n\t\t\t\t\tel: pagination,\r\n\t\t\t\t\ttype: 'bullets',\r\n\t\t\t\t},\r\n\t\t\t\tbreakpoints: {\r\n\t\t\t\t\t0: {\r\n\t\t\t\t\t\tslidesPerView: 1,\r\n\t\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t\t},\r\n\t\t\t\t\t768: {\r\n\t\t\t\t\t\tslidesPerView: 2,\r\n\t\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t\t},\r\n\t\t\t\t\t1200: {\r\n\t\t\t\t\t\tslidesPerView: 3,\r\n\t\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t\t},\r\n\t\t\t\t}\r\n\t\t\t})\r\n\t\t})\r\n\t}\r\n\r\n\r\n\tconst indexPopupSliderEl = document.getElementById('indexPopupSlider');\r\n\tif(indexPopupSliderEl) {\r\n\t\tconst indexPopupSlider = new Swiper(indexPopupSliderEl, {\r\n\t\t\twatchOverflow: true,\r\n\t\t\tslidesPerView: 1,\r\n\t\t\tspaceBetween: 20,\r\n\t\t\tpagination: {\r\n\t\t\t\tel: '#indexPopupSliderPagination',\r\n\t\t\t\ttype: 'bullets',\r\n\t\t\t},\r\n\t\t\tnavigation: {\r\n\t\t\t\tprevEl: '#indexPopupSliderPaginationPrev',\r\n\t\t\t\tnextEl: '#indexPopupSliderPaginationNext',\r\n\t\t\t},\r\n\t\t})\r\n\t}\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/indexTabs.js?");
-    /***/
-  },
+    if (t) {
+      const e = t.querySelectorAll(".tabs-box .tab"),
+            n = Array.prototype.slice.call(e),
+            i = t.querySelectorAll(".services-train__content-box"),
+            s = Array.prototype.slice.call(i);
+      n.forEach((e, t) => {
+        e.addEventListener("click", function () {
+          n.forEach(e => e.classList.remove("tab-active")), e.classList.add("tab-active"), s.forEach(e => e.classList.remove("active")), s[t].classList.add("active");
+        });
+      });
+    }
+  };
+}, function (e, t, n) {
+  n(0), n(1), n(2), n(3), n(4), n(9), n(7), n(5), e.exports = n(6);
+}, function (e, t, n) {
+  "use strict";
 
-  /***/
-  "./src/assets/js/menu.js":
-  /*!*******************************!*\
-    !*** ./src/assets/js/menu.js ***!
-    \*******************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function (module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\nconst menu = document.getElementById('menu');\r\n\r\nconst burgerBtn = document.getElementById('burgerBtn');\r\nconst menuCloseBtn = document.getElementById('menuCloseBtn');\r\n\r\nfunction disableScroll() {\r\n\thtml.style.overflowX = 'hidden';\r\n\thtml.style.overflowY = 'hidden';\r\n};\r\n\r\nfunction enableScroll() {\r\n\thtml.style.overflowX = 'hidden';\r\n\thtml.style.overflowY = 'scroll';\r\n};\r\n\r\nfunction closeEl(el) {\r\n\tel.classList.remove('open');\r\n\tenableScroll();\r\n}\r\n\r\nfunction openEl(el) {\r\n\tel.classList.add('open');\r\n\tdisableScroll();\r\n}\r\n\r\nburgerBtn.addEventListener('click', function() {\r\n\topenEl(menu)\r\n})\r\n\r\nmenuCloseBtn.addEventListener('click', function() {\r\n\tcloseEl(menu)\r\n})\r\n\r\nmenu.addEventListener('click', function(ev) {\r\n\tconst vw = document.documentElement.offsetWidth;\r\n\tif(ev.target === this && vw > 767) {\r\n\t\tcloseEl(menu);\r\n\t\tconsole.log('true')\r\n\t}\r\n})\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/menu.js?");
-    /***/
-  },
-
-  /***/
-  "./src/assets/js/script.js":
-  /*!*********************************!*\
-    !*** ./src/assets/js/script.js ***!
-    \*********************************/
-
-  /*! no exports provided */
-
-  /***/
-  function (module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sliders_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./sliders.js */ \"./src/assets/js/sliders.js\");\n/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu.js */ \"./src/assets/js/menu.js\");\n/* harmony import */ var _yamaps_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./yamaps.js */ \"./src/assets/js/yamaps.js\");\n/* harmony import */ var _adaptiveSliders_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./adaptiveSliders.js */ \"./src/assets/js/adaptiveSliders.js\");\n/* harmony import */ var _serviceTabs_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./serviceTabs.js */ \"./src/assets/js/serviceTabs.js\");\n/* harmony import */ var _indexTabs_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./indexTabs.js */ \"./src/assets/js/indexTabs.js\");\n/* harmony import */ var _headerFix_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./headerFix.js */ \"./src/assets/js/headerFix.js\");\n/* harmony import */ var _indexHero_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./indexHero.js */ \"./src/assets/js/indexHero.js\");\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\ndocument.addEventListener(\"DOMContentLoaded\", function () {\r\n\r\n\tObject(_sliders_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\r\n\tObject(_menu_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\r\n\tObject(_yamaps_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\r\n\tObject(_adaptiveSliders_js__WEBPACK_IMPORTED_MODULE_3__[\"default\"])();\r\n\tObject(_serviceTabs_js__WEBPACK_IMPORTED_MODULE_4__[\"default\"])();\r\n\tObject(_indexTabs_js__WEBPACK_IMPORTED_MODULE_5__[\"default\"])();\r\n\tObject(_headerFix_js__WEBPACK_IMPORTED_MODULE_6__[\"default\"])();\r\n\tObject(_indexHero_js__WEBPACK_IMPORTED_MODULE_7__[\"default\"])();\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/script.js?");
-    /***/
-  },
-
-  /***/
-  "./src/assets/js/serviceTabs.js":
-  /*!**************************************!*\
-    !*** ./src/assets/js/serviceTabs.js ***!
-    \**************************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function (module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst servicesPlaces = document.getElementById('servicesPlaces');\r\n\tif(servicesPlaces) {\r\n\t\tconst servicesPlacesTabsNL = servicesPlaces.querySelectorAll('.tabs-box .tab');\r\n\t\tconst servicesPlacesTabs = Array.prototype.slice.call(servicesPlacesTabsNL);\r\n\t\t\r\n\t\tconst servicesPlacesContentsNL = servicesPlaces.querySelectorAll('.services-places__content');\r\n\t\tconst servicesPlacesContents = Array.prototype.slice.call(servicesPlacesContentsNL);\r\n\r\n\t\tservicesPlacesTabs.forEach((tab, index) => {\r\n\t\t\ttab.addEventListener('click', function() {\r\n\t\t\t\tservicesPlacesTabs.forEach(el => el.classList.remove('tab-active'))\r\n\t\t\t\ttab.classList.add('tab-active')\r\n\r\n\t\t\t\tservicesPlacesContents.forEach(el => el.classList.remove('active'))\r\n\t\t\t\tservicesPlacesContents[index].classList.add('active')\r\n\t\t\t})\r\n\t\t})\r\n\t}\r\n\r\n\tconst servicesTrain = document.getElementById('servicesTrain');\r\n\tif(servicesTrain) {\r\n\t\tconst servicesTrainTabsNL = servicesTrain.querySelectorAll('.tabs-box .tab');\r\n\t\tconst servicesTrainTabs = Array.prototype.slice.call(servicesTrainTabsNL);\r\n\t\t\r\n\t\tconst servicesTrainContentsNL = servicesTrain.querySelectorAll('.services-train__content-box');\r\n\t\tconst servicesTrainContents = Array.prototype.slice.call(servicesTrainContentsNL);\r\n\r\n\t\tservicesTrainTabs.forEach((tab, index) => {\r\n\t\t\ttab.addEventListener('click', function() {\r\n\t\t\t\tservicesTrainTabs.forEach(el => el.classList.remove('tab-active'))\r\n\t\t\t\ttab.classList.add('tab-active')\r\n\r\n\t\t\t\tservicesTrainContents.forEach(el => el.classList.remove('active'))\r\n\t\t\t\tservicesTrainContents[index].classList.add('active')\r\n\t\t\t})\r\n\t\t})\r\n\t}\r\n\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/serviceTabs.js?");
-    /***/
-  },
-
-  /***/
-  "./src/assets/js/sliders.js":
-  /*!**********************************!*\
-    !*** ./src/assets/js/sliders.js ***!
-    \**********************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function (module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\n\tconst indexHeroSlider = new Swiper('#indexHeroSlider', {\r\n\t\t\tnavigation: {\r\n\t\t\t\tnextEl: '#indexHeroSliderNextBtn',\r\n\t\t\t\tprevEl: '#indexHeroSliderPrevBtn',\r\n\t\t\t},\r\n\t\t\tpagination: {\r\n\t\t\t\tel: '#indexHeroSliderPagination',\r\n\t\t\t\ttype: 'fraction',\r\n\t\t\t},\r\n\t\t\tslidesPerView: 1,\r\n\t\t\tspaceBetween: 10,\r\n\r\n\t\t})\r\n\r\n\tconst servicesTripSlider = new Swiper('#servicesTripSlider', {\r\n\t\t\tpagination: {\r\n\t\t\t\tel: '#servicesTripSliderPagination',\r\n\t\t\t\ttype: 'bullets',\r\n\t\t\t},\r\n\t\t\twatchOverflow: true,\r\n\t\t\tbreakpoints: {\r\n\t\t\t\t0: {\r\n\t\t\t\t\tslidesPerView: 1.23,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t},\r\n\t\t\t\t768: {\r\n\t\t\t\t\tslidesPerView: 2,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t},\r\n\t\t\t\t1200: {\r\n\t\t\t\t\tslidesPerView: 3,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t})\r\n\r\n\tconst indexBlogSlider = new Swiper('#indexBlogSlider', {\r\n\t\t\twatchOverflow: true,\r\n\t\t\tbreakpoints: {\r\n\t\t\t\t0: {\r\n\t\t\t\t\tslidesPerView: 1.23,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t},\r\n\t\t\t\t768: {\r\n\t\t\t\t\tslidesPerView: 2,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t},\r\n\t\t\t\t1200: {\r\n\t\t\t\t\tslidesPerView: 3,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t})\r\n\r\n\tconst indexReviewsSlider = new Swiper('#indexReviewsSlider', {\r\n\t\t\tpagination: {\r\n\t\t\t\tel: '#indexReviewsSliderPagination',\r\n\t\t\t\ttype: 'bullets',\r\n\t\t\t},\r\n\t\t\twatchOverflow: true,\r\n\t\t\tbreakpoints: {\r\n\t\t\t\t0: {\r\n\t\t\t\t\tslidesPerView: 1,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t},\r\n\t\t\t\t768: {\r\n\t\t\t\t\tslidesPerView: 1,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t},\r\n\t\t\t\t1200: {\r\n\t\t\t\t\tslidesPerView: 2,\r\n\t\t\t\t\tspaceBetween: 30,\r\n\t\t\t\t}\r\n\t\t\t}\r\n\r\n\t\t})\r\n\r\n\tconst servicesTrainBtnsSlidersElementsNL = document.querySelectorAll('.services-train .services-train__content-box .services-train__offers-list .swiper-container')\r\n\tconst servicesTrainBtnsSlidersElements = Array.prototype.slice.call(servicesTrainBtnsSlidersElementsNL)\r\n\r\n\tservicesTrainBtnsSlidersElements.forEach(el => {\r\n\t\tconsole.log(el)\r\n\t\tconst slider = new Swiper(el, {\r\n\t\t\tmousewheel: true,\r\n\t\t\tspeed: 1000,\r\n\t\t\tautoplay: {\r\n\t\t\t\tdelay: 3000,\r\n\t\t\t},\r\n\t\t\tdisableOnInteraction: false,\r\n\t\t\twaitForTransition: true,\r\n\t\t\tbreakpoints: {\r\n\t\t\t\t0: {\r\n\t\t\t\t\tslidesPerView: 1.145,\r\n\t\t\t\t\tspaceBetween: 10,\r\n\t\t\t\t},\r\n\t\t\t\t768: {\r\n\t\t\t\t\tslidesPerView: 2.326,\r\n\t\t\t\t\tspaceBetween: 20,\r\n\t\t\t\t},\r\n\t\t\t\t1200: {\r\n\t\t\t\t\tdirection: 'vertical',\r\n\t\t\t\t\tslidesPerGroup: 5,\r\n\t\t\t\t\tslidesPerView: 5,\r\n\t\t\t\t\tspaceBetween: 20,\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t})\r\n\t})\r\n\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/sliders.js?");
-    /***/
-  },
-
-  /***/
-  "./src/assets/js/yamaps.js":
-  /*!*********************************!*\
-    !*** ./src/assets/js/yamaps.js ***!
-    \*********************************/
-
-  /*! exports provided: default */
-
-  /***/
-  function (module, __webpack_exports__, __webpack_require__) {
-    "use strict";
-
-    eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (function () {\r\n\r\nconst ourGeo = [44.561012, 38.077115]\r\n\r\nconst mapEl = document.getElementById('contactsMap');\r\nif(!mapEl) return\r\n    ymaps.ready(init);\r\n    function init(){\r\n        var myMap = new ymaps.Map(\"contactsMap\", {\r\n            center: ourGeo,\r\n            zoom: 17\r\n        });\r\n\t\t// var myGeoObject = new ymaps.GeoObject({\r\n\t\t//     geometry: {\r\n\t\t//         type: \"Point\", // тип геометрии - точка\r\n\t\t//         coordinates: ourGeo // координаты точки\r\n\t\t//     }\r\n\t\t// });\r\n\r\n\t\t// myMap.geoObjects.add(myGeoObject);\r\n\t\tvar myPlacemark = new ymaps.Placemark(ourGeo, {}, {\r\n\t\t    iconLayout: 'default#image',\r\n\t\t    iconImageHref: 'assets/img/yamap-tag.png',\r\n\t\t    iconImageSize: [28, 36],\r\n\t\t    iconImageOffset: [-36, -36]\r\n\t\t});\r\n\t\tmyMap.geoObjects.add(myPlacemark);\r\n\r\n    }\r\nconst contactsMapList = document.getElementById('contactsMapList');\r\nconst contactsMapBox = document.getElementById('contactsMapBox');\r\n\r\n\r\n});\n\n//# sourceURL=webpack:///./src/assets/js/yamaps.js?");
-    /***/
-  },
-
-  /***/
-  0:
-  /*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
-    !*** multi ./src/assets/js/adaptiveSliders.js ./src/assets/js/headerFix.js ./src/assets/js/indexHero.js ./src/assets/js/indexTabs.js ./src/assets/js/menu.js ./src/assets/js/script.js ./src/assets/js/serviceTabs.js ./src/assets/js/sliders.js ./src/assets/js/yamaps.js ***!
-    \*****************************************************************************************************************************************************************************************************************************************************************************/
-
-  /*! no static exports found */
-
-  /***/
-  function (module, exports, __webpack_require__) {
-    eval("__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\adaptiveSliders.js */\"./src/assets/js/adaptiveSliders.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\headerFix.js */\"./src/assets/js/headerFix.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\indexHero.js */\"./src/assets/js/indexHero.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\indexTabs.js */\"./src/assets/js/indexTabs.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\menu.js */\"./src/assets/js/menu.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\script.js */\"./src/assets/js/script.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\serviceTabs.js */\"./src/assets/js/serviceTabs.js\");\n__webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\sliders.js */\"./src/assets/js/sliders.js\");\nmodule.exports = __webpack_require__(/*! C:\\Users\\timur\\Desktop\\diving-club\\src\\assets\\js\\yamaps.js */\"./src/assets/js/yamaps.js\");\n\n\n//# sourceURL=webpack:///multi_./src/assets/js/adaptiveSliders.js_./src/assets/js/headerFix.js_./src/assets/js/indexHero.js_./src/assets/js/indexTabs.js_./src/assets/js/menu.js_./src/assets/js/script.js_./src/assets/js/serviceTabs.js_./src/assets/js/sliders.js_./src/assets/js/yamaps.js?");
-    /***/
-  }
-  /******/
-
-});
+  n.r(t);
+  var i = n(5),
+      s = n(4),
+      c = n(6),
+      o = n(0),
+      r = n(7),
+      a = n(3),
+      l = n(1),
+      d = n(2);
+  document.addEventListener("DOMContentLoaded", function () {
+    Object(i.default)(), Object(s.default)(), Object(c.default)(), Object(o.default)(), Object(r.default)(), Object(a.default)(), Object(l.default)(), Object(d.default)();
+    let e = .01 * window.innerHeight;
+    document.documentElement.style.setProperty("--vh", e + "px");
+  });
+}]);
