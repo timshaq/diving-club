@@ -11,8 +11,8 @@
 	visibility: hidden
 	z-index: -1
 	transition: all linear .1s
-	display: flex
 	&.open
+		display: flex
 		opacity: 1
 		visibility: visible
 		z-index: 40
@@ -67,6 +67,15 @@
 				margin-left: auto
 			@media(min-width:$xl)
 				width: 170px
+		&.team-member-popup
+			width: 290px
+			position: relative
+			margin-top: 60px
+			@media(min-width:$md)
+				width: 708px
+			@media(min-width:$xl)
+				width: 830px
+				margin-top: 100px
 	& .popup-response
 		padding: 15px 15px 30px
 		border-radius: 10px 10px 0px 0px
@@ -132,3 +141,193 @@
 			@media(min-width:$md)
 				height: 140px
 
+
+.team-member-popup
+	padding-top: 80px
+	padding-bottom: 30px
+	padding-right: 15px
+	padding-left: 15px
+	height: fit-content
+	margin-right: auto
+	margin-left: auto
+	box-shadow: 0px 6px 16px rgba(46, 60, 80, 0.07)
+	border-radius: 10px
+	@media(min-width:$md)
+		padding-top: 135px
+		padding-bottom: 40px
+		padding-right: 30px
+		padding-left: 30px
+	@media(min-width:$xl)
+		padding-top: 160px
+	&__ph-box
+		width: 110px
+		height: 110px
+		position: absolute
+		top: -50px
+		left: 50%
+		transform: translateX(-50%)
+		@media(min-width:$md)
+			width: 160px
+			height: 160px
+		@media(min-width:$xl)
+			width: 180px
+			height: 180px
+	&__ph
+		width: 100%
+		height: 100%
+		object-fit: cover
+	&__close
+
+	&__close-icon
+
+	&__title
+		font-family: PlayfairDisplay
+		font-style: normal
+		font-weight: 900
+		font-size: 16px
+		line-height: 21px
+		text-align: center
+		letter-spacing: 0.05em
+		@media(min-width:$md)
+			font-size: 20px
+			line-height: 27px
+		@media(min-width:$xl)
+			font-size: 24px
+			line-height: 32px
+	&__subtitle
+		font-size: 14px
+		line-height: 22px
+		color: var(--black50)
+		text-align: center
+		margin-top: 10px
+	&__separator-box
+		width: 36px
+		height: 6px
+		margin-right: auto
+		margin-left: auto
+		margin-top: 15px
+		@media(min-width:$xl)
+			margin-top: 20px
+	&__separatoe-icon
+		width: 100%
+		height: 100%
+		object-fit: contain
+	&__content
+		margin-top: 15px
+		@media(min-width:$xl)
+			margin-top: 30px
+			display: flex
+			justify-content: space-between
+	&__text
+		@media(min-width:$xl)
+			width: 370px
+	&__text-title
+		font-weight: 600
+		font-size: 16px
+		line-height: 29px
+		text-align: center
+	&__p
+		font-size: 14px
+		line-height: 25px
+		color: var(--black50)
+		text-align: center
+	&__slider-box
+		position: relative
+		@media(min-width:$md)
+			width: 340px
+			margin-right: auto
+			margin-left: auto
+		@media(min-width:$xl)
+			width: 370px
+	&__slider
+		width: 260px
+		height: 255px
+		margin-top: 20px
+		@media(min-width:$md)
+			width: 340px
+			height: 282px
+		@media(min-width:$xl)
+			width: 370px
+			height: 305px
+			margin-top: 0
+	&__slide
+		height: auto
+		object-fit: contain
+	&__slider-prev,
+	&__slider-next
+		display: none
+		@media(min-width: $md)
+			background-color: var(--white)
+			display: flex
+			justify-content: center
+			align-items: center
+			width: 26px
+			height: 26px
+			border-radius: 100%
+			position: absolute
+			top: 60%
+			transform: translateY(-50%)
+			z-index: 10
+			box-shadow: 0px 6px 16px rgba(46, 60, 80, 0.07)
+			& img
+				width: 4px
+				height: 8px
+				object-fit: contain
+			&.swiper-button-disabled
+				display: none
+		@media(min-width: $xl)
+			display: none
+	&__slider-prev
+		left: -13px
+		& img
+			transform: scale(-1,1)
+	&__slider-next
+		right: -13px
+	&__links
+		display: flex
+		justify-content: center
+		margin-top: 30px
+		@media(min-width:$md)
+			margin-top: 40px
+		@media(min-width:$xl)
+			margin-top: 45px
+	&__link
+		& + .team-member-popup__link
+			margin-left: 20px
+
+	&__link-icon
+	& .swiper-container
+		padding-bottom: 40px
+		@media(min-width:$md)
+			padding-bottom: 0
+	& .swiper-wrapper
+	& .swiper-pagination
+		bottom: 0
+		height: 20px
+		@media(min-width: $md)
+			display: none
+	& .swiper-pagination-bullet
+		width: 20px
+		height: 20px
+		position: relative
+		background-color: var(--white)
+		opacity: 1
+		margin: 0
+		& + .swiper-pagination-bullet
+			margin-left: 10px
+		&:before
+			content: ''
+			width: 12px
+			height: 12px
+			background-color: var(--black10)
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%,-50%)
+			border-radius: 100%
+	& .swiper-pagination-bullet-active
+		width: 20px
+		height: 20px
+		border: 1px solid var(--blue)
+		&:before
+			background-color: var(--blue)

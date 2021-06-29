@@ -142,4 +142,22 @@ export default function () {
 		})
 	}
 
+
+	const indexPopupSliderEl = document.getElementById('indexPopupSlider');
+	if(indexPopupSliderEl) {
+		const indexPopupSlider = new Swiper(indexPopupSliderEl, {
+			watchOverflow: true,
+			slidesPerView: 1,
+			spaceBetween: 20,
+			pagination: {
+				el: '#indexPopupSliderPagination',
+				type: 'bullets',
+			},
+			navigation: {
+				prevEl: '#indexPopupSliderPaginationPrev',
+				nextEl: '#indexPopupSliderPaginationNext',
+			},
+		})
+	}
+
 }
