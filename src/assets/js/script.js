@@ -19,6 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	indexTabs();
 	headerFix();
 	indexHero();
-	let vh = window.innerHeight * 0.01;
-	document.documentElement.style.setProperty('--vh', `${vh}px`);
+	let headerHeight = document.getElementById('header').offsetHeight;
+	document.documentElement.style.setProperty('--header-vh', `${headerHeight}px`);
 });
