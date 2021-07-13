@@ -8,6 +8,7 @@ import serviceTabs from './serviceTabs.js';
 import indexTabs from './indexTabs.js';
 import headerFix from './headerFix.js';
 import indexHero from './indexHero.js';
+import callback from './callback.js';
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	indexTabs();
 	headerFix();
 	indexHero();
+	callback();
 	let headerHeight = document.getElementById('header').offsetHeight;
 	document.documentElement.style.setProperty('--header-vh', `${headerHeight}px`);
 });

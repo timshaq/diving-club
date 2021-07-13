@@ -230,6 +230,7 @@ h1, h2, h3, h4, h5, h6 {
   --black50: rgba(0, 36, 70, .5);
   --black10: rgba(0, 36, 70, .1);
   --blue: rgba(0, 96, 187, 1);
+  --blue50: rgba(0, 96, 187, .5);
   --border: rgba(51, 51, 51, .1);
   --gray-light: rgba(249, 249, 249, 1);
   --black-dark50: rgba(51, 51, 51, .5);
@@ -3816,6 +3817,14 @@ label textarea {
   width: 100%;
 }
 
+.services-train__content {
+  display: none;
+}
+
+.services-train__content.active {
+  display: block;
+}
+
 @media (min-width: 1200px) {
   .services-train__content {
     -webkit-box-ordinal-group: 2;
@@ -3863,6 +3872,11 @@ label textarea {
           align-items: center;
   background-color: var(--white);
   box-shadow: 0px 0px 25px -3px rgba(46, 60, 80, 0.07);
+  border-radius: 10px;
+}
+
+.services-train-offer.active {
+  background-color: var(--blue50);
 }
 
 .services-train-offer__ph-box {
@@ -3870,20 +3884,23 @@ label textarea {
   height: 60px;
   min-width: 60px;
   min-height: 60px;
+  border-radius: 10px;
 }
 
 @media (min-width: 768px) {
   .services-train-offer__ph-box {
-    width: 90px;
-    height: 90px;
-    min-width: 90px;
-    min-height: 90px;
+    width: 80px;
+    height: 80px;
+    min-width: 80px;
+    min-height: 80px;
   }
 }
 
 .services-train-offer__ph {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .services-train-offer__name {
@@ -5725,6 +5742,18 @@ label textarea {
     height: -moz-fit-content;
     height: fit-content;
   }
+}
+
+.popup-box .popup-review__fieldset {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (max-width: 767px) {
