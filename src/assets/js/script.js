@@ -9,6 +9,7 @@ import indexTabs from './indexTabs.js';
 import headerFix from './headerFix.js';
 import indexHero from './indexHero.js';
 import callback from './callback.js';
+import indexGallery from './indexGallery.js';
 
 document.addEventListener("DOMContentLoaded", function () {
 
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	headerFix();
 	indexHero();
 	callback();
+	indexGallery();
 	let headerHeight = document.getElementById('header').offsetHeight;
 	document.documentElement.style.setProperty('--header-vh', `${headerHeight}px`);
 });

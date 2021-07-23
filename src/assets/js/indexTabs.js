@@ -47,6 +47,10 @@ export default function () {
 					slidesPerView: 1.23,
 					spaceBetween: 10,
 				},
+				576: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
 				768: {
 					slidesPerView: 3,
 					spaceBetween: 30,

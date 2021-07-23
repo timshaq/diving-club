@@ -31,8 +31,16 @@ export default function () {
 	if(servicesPlacesSlidersElements.length > 0) {
 		servicesPlacesSlidersElements.forEach(el => {
 			setAdaptiveSlider(el, 768, {
-					slidesPerView: 1.23,
-					spaceBetween: 10,
+					breakpoints: {
+						0: {
+							slidesPerView: 1.23,
+							spaceBetween: 10,
+						},
+						576: {
+							slidesPerView: 2,
+							spaceBetween: 10,
+						}
+					}
 				})
 		})
 	}
@@ -43,8 +51,16 @@ export default function () {
 	if(indexPriceSlidersElements.length > 0) {
 		indexPriceSlidersElements.forEach(el => {
 			setAdaptiveSlider(el, 768, {
-					slidesPerView: 1.23,
-					spaceBetween: 10,
+					breakpoints: {
+						0: {
+							slidesPerView: 1.23,
+							spaceBetween: 10,
+						},
+						576: {
+							slidesPerView: 2,
+							spaceBetween: 10,
+						}
+					}
 				})
 		})
 	}

@@ -25,6 +25,10 @@ export default function () {
 					slidesPerView: 1.23,
 					spaceBetween: 10,
 				},
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
 				768: {
 					slidesPerView: 2,
 					spaceBetween: 30,
@@ -95,6 +99,10 @@ export default function () {
 			breakpoints: {
 				0: {
 					slidesPerView: 1.145,
+					spaceBetween: 10,
+				},
+				576: {
+					slidesPerView: 2,
 					spaceBetween: 10,
 				},
 				768: {

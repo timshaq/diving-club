@@ -42,7 +42,7 @@
     return n.d(t, "a", t), t;
   }, n.o = function (e, t) {
     return Object.prototype.hasOwnProperty.call(e, t);
-  }, n.p = "", n(n.s = 9);
+  }, n.p = "", n(n.s = 10);
 }([function (e, t, n) {
   "use strict";
 
@@ -64,16 +64,32 @@
           n = Array.prototype.slice.call(t);
     n.length > 0 && n.forEach(t => {
       e(t, 768, {
-        slidesPerView: 1.23,
-        spaceBetween: 10
+        breakpoints: {
+          0: {
+            slidesPerView: 1.23,
+            spaceBetween: 10
+          },
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 10
+          }
+        }
       });
     });
     const i = document.querySelectorAll(".index-price .index-price__content-box .swiper-container"),
           c = Array.prototype.slice.call(i);
     c.length > 0 && c.forEach(t => {
       e(t, 768, {
-        slidesPerView: 1.23,
-        spaceBetween: 10
+        breakpoints: {
+          0: {
+            slidesPerView: 1.23,
+            spaceBetween: 10
+          },
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 10
+          }
+        }
       });
     });
     const s = document.getElementById("articleAsideSlider");
@@ -145,6 +161,18 @@
   "use strict";
 
   n.r(t), t.default = function () {
+    const e = document.getElementById("lightgallery");
+    e && lightGallery(e, {
+      download: !1,
+      thumbnail: !0,
+      speed: 400,
+      mousewheel: !0
+    });
+  };
+}, function (e, t, n) {
+  "use strict";
+
+  n.r(t), t.default = function () {
     const e = document.getElementById("indexHeroParallax");
 
     if (e) {
@@ -210,6 +238,10 @@
           0: {
             slidesPerView: 1.23,
             spaceBetween: 10
+          },
+          576: {
+            slidesPerView: 3,
+            spaceBetween: 30
           },
           768: {
             slidesPerView: 3,
@@ -366,6 +398,10 @@
           slidesPerView: 1.23,
           spaceBetween: 10
         },
+        576: {
+          slidesPerView: 2,
+          spaceBetween: 10
+        },
         768: {
           slidesPerView: 2,
           spaceBetween: 30
@@ -426,6 +462,10 @@
         breakpoints: {
           0: {
             slidesPerView: 1.145,
+            spaceBetween: 10
+          },
+          576: {
+            slidesPerView: 2,
             spaceBetween: 10
           },
           768: {
@@ -514,22 +554,23 @@
     }
   };
 }, function (e, t, n) {
-  n(0), n(1), n(2), n(3), n(4), n(5), n(10), n(8), n(6), e.exports = n(7);
+  n(0), n(1), n(2), n(3), n(4), n(5), n(6), n(11), n(9), n(7), e.exports = n(8);
 }, function (e, t, n) {
   "use strict";
 
   n.r(t);
-  var i = n(6),
-      c = n(5),
-      s = n(7),
+  var i = n(7),
+      c = n(6),
+      s = n(8),
       o = n(0),
-      r = n(8),
-      a = n(4),
+      r = n(9),
+      a = n(5),
       l = n(2),
-      d = n(3),
-      u = n(1);
+      d = n(4),
+      u = n(1),
+      p = n(3);
   document.addEventListener("DOMContentLoaded", function () {
-    Object(i.default)(), Object(c.default)(), Object(s.default)(), Object(o.default)(), Object(r.default)(), Object(a.default)(), Object(l.default)(), Object(d.default)(), Object(u.default)();
+    Object(i.default)(), Object(c.default)(), Object(s.default)(), Object(o.default)(), Object(r.default)(), Object(a.default)(), Object(l.default)(), Object(d.default)(), Object(u.default)(), Object(p.default)();
     let e = document.getElementById("header").offsetHeight;
     document.documentElement.style.setProperty("--header-vh", e + "px");
   });

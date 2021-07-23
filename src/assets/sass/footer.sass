@@ -70,6 +70,7 @@
 			padding-top: 0
 			padding-bottom: 0
 			border: none
+			max-width: 90px
 	&__nav-list
 		display: grid
 		grid-template-columns: repeat(2, 1fr)
@@ -93,15 +94,20 @@
 	&__contacts
 		@media(min-width: $md)
 			order: 1
+			max-width: 255px
 	&__map
 		width: 290px
 		height: 203px
 		border-radius: 10px
 		overflow: hidden
+		margin-right: auto
+		margin-left: auto
 		@media(min-width: $md)
 			width: 246px
 			height: 203px
 			order: 3
+			margin-right: 0
+			margin-left: 0
 		@media(min-width: $xl)
 			width: 570px
 			height: 220px
