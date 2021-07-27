@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru" id="html">
+<head>
+	<title>Блог</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="assets/lib/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.min.css">
+</head>
+
+<body id="body">
+
+@@include('assets/html/header.html')
+
+<main>
+
+<ul class="breadscrumb fix-box">
+	<li class="breadscrumb-item">
+		<a href="#">Главная</a>
+	</li>
+	<li class="breadscrumb-item">
+		<span>Блог</span>
+	</li>
+</ul>
+
+<div class="title-page">
+	<h1 class="title-page__title">
+		Цены
+	</h1>
+	<div class="title-page__separator">
+		<img src="assets/img/h1-separator.png" alt="" class="title-page__separator-icon">
+	</div>
+</div>
+
+<div class="blog">
+	<div class="blog__fix-box fix-box">
+		<ul class="blog__list">
+			<li class="blog__item blog-item">
+				<a href="#" class="services-places__link services-places-link swiper-slide">
+					<div class="services-places-link__header">
+						<div class="services-places-link__icon-box">
+							<img src="assets/img/services-places__01.svg" alt="" class="services-places-link__icon">
+						</div>
+						<h3 class="services-places-link__name">
+							Ознакомительное погружение
+						</h3>
+					</div>
+					<p class="services-places-link__text">
+						Orci auctor magna nunc viverra bibendum. Dignissim etiam cras enim et. Auctor cras dictum
+					</p>
+					<div class="services-places-link__price">
+						2 000 руб.
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="btns-box">
+		<button class="btn btn-blue">
+			Показать еще
+		</button>
+	</div>
+</div>
+
+</main>
+
+@@include('assets/html/footer.html')
+
+</body>
+
+
+
+</html>
