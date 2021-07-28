@@ -52,13 +52,17 @@
 	box-shadow: 0px 0px 25px -3px rgba(46, 60, 80, 0.07)
 	border-radius: 10px
 	&.active
-		background-color: var(--blue50)
+		& .services-train-offer__name
+			color: var(--blue)
 	&__ph-box
 		width: 60px
 		height: 60px
 		min-width: 60px
 		min-height: 60px
 		border-radius: 10px
+		display: flex
+		justify-content: center
+		align-items: center
 		@media(min-width: $md)
 			width: 80px
 			height: 80px
@@ -80,6 +84,16 @@
 		@media(min-width: $md)
 			font-size: 18px
 			line-height: 29px
+	&__text
+		display: flex
+		flex-direction: column
+	&__date
+		background-image: url('../img/calendar-blue.svg')
+		background-repeat: no-repeat
+		margin-left: 15px
+		padding-left: 30px
+		margin-top: 15px
+		text-align: left
 
 
 .services-train-content
@@ -187,3 +201,7 @@
 			margin-left: 25px
 		@media(min-width: $xl)
 			margin-left: 30px
+
+.services-places-img
+	width: 50px
+	height: 50px
