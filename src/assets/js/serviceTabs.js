@@ -38,53 +38,53 @@ export default function () {
 		})
 	}
 
-	const servicesTrain = document.getElementById('servicesTrain');
-	if(servicesTrain) {
-		const servicesTrainTabsNL = servicesTrain.querySelectorAll('.tabs-box .tab');
-		const servicesTrainTabs = Array.prototype.slice.call(servicesTrainTabsNL);
+	// const servicesTrain = document.getElementById('servicesTrain');
+	// if(servicesTrain) {
+	// 	const servicesTrainTabsNL = servicesTrain.querySelectorAll('.tabs-box .tab');
+	// 	const servicesTrainTabs = Array.prototype.slice.call(servicesTrainTabsNL);
 		
-		const servicesTrainContentsNL = servicesTrain.querySelectorAll('.services-train__content-box');
-		const servicesTrainContents = Array.prototype.slice.call(servicesTrainContentsNL);
+	// 	const servicesTrainContentsNL = servicesTrain.querySelectorAll('.services-train__content');
+	// 	const servicesTrainContents = Array.prototype.slice.call(servicesTrainContentsNL);
 
-		servicesTrainTabs.forEach((tab, index) => {
-			tab.addEventListener('click', function() {
-				servicesTrainTabs.forEach(el => el.classList.remove('tab-active'))
-				tab.classList.add('tab-active')
+	// 	servicesTrainTabs.forEach((tab, index) => {
+	// 		tab.addEventListener('click', function() {
+	// 			servicesTrainTabs.forEach(el => el.classList.remove('tab-active'))
+	// 			tab.classList.add('tab-active')
 
-				servicesTrainContents.forEach(el => el.classList.remove('active'))
-				servicesTrainContents[index].classList.add('active')
-			})
-		})
-
-
+	// 			servicesTrainContents.forEach(el => el.classList.remove('active'))
+	// 			servicesTrainContents[index].classList.add('active')
+	// 		})
+	// 	})
 
 
-		const contentTab1 = document.querySelector('.services-train__content-box[data-tab="1"]')
-		const contentTab2 = document.querySelector('.services-train__content-box[data-tab="2"]')
 
 
-		function startContentToggler(contentTab) {
-			const offersNL = contentTab.querySelectorAll('.services-train__offers-btn')
-			const offers = Array.prototype.slice.call(offersNL);
+	// 	const contentTab1 = document.querySelector('.services-train__content-box[data-tab="1"]')
+	// 	const contentTab2 = document.querySelector('.services-train__content-box[data-tab="2"]')
 
-			const contentNL = contentTab.querySelectorAll('.services-train-content')
-			const content = Array.prototype.slice.call(contentNL);
 
-			offers.forEach(offer => {
-				const id = offer.getAttribute('data-content-id')
-				offer.addEventListener('click', function() {
-					const find = contentTab.querySelector(`.services-train-content[data-content-id="${id}"]`)
-					content.forEach(el => el.classList.remove('active'))
-					offers.forEach(el => el.classList.remove('active'))
-					find.classList.add('active')
-					offer.classList.add('active')
-				})
-			})
-		}
-		startContentToggler(contentTab1)
-		startContentToggler(contentTab2)
+	// 	function startContentToggler(contentTab) {
+	// 		const offersNL = contentTab.querySelectorAll('.services-train__offers-btn')
+	// 		const offers = Array.prototype.slice.call(offersNL);
 
-	}
+	// 		const contentNL = contentTab.querySelectorAll('.services-train-content')
+	// 		const content = Array.prototype.slice.call(contentNL);
+
+	// 		offers.forEach(offer => {
+	// 			const id = offer.getAttribute('data-content-id')
+	// 			offer.addEventListener('click', function() {
+	// 				const find = contentTab.querySelector(`.services-train-content[data-content-id="${id}"]`)
+	// 				content.forEach(el => el.classList.remove('active'))
+	// 				offers.forEach(el => el.classList.remove('active'))
+	// 				find.classList.add('active')
+	// 				offer.classList.add('active')
+	// 			})
+	// 		})
+	// 	}
+	// 	startContentToggler(contentTab1)
+	// 	startContentToggler(contentTab2)
+
+	// }
 
 
 }
